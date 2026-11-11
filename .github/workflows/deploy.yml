@@ -62,6 +62,11 @@ jobs:
             sed -i '/"routes": \[/d' wrangler.jsonc
             npm run deploy
           fi
+      - name: 대문 사이트(richislet.com) 임시 배포
+        if: steps.secrets.outputs.ready == 'true'
+        run: |
+          npx wrangler deploy -c portal/wrangler.jsonc
+          node scripts/portal-domains.mjs
       - name: 발음 음성 생성과 R2 업로드
         if: steps.secrets.outputs.ready == 'true'
         run: |

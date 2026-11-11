@@ -1,0 +1,9 @@
+{
+  "$schema": "../node_modules/wrangler/config-schema.json",
+  // 임시: richislet.com 대문 사이트의 원본은 domminc/richislet-gate 저장소다.
+  // 그 저장소에 배포용 Secrets 가 들어가기 전까지 이 저장소의 배포가 같은 Worker 를 대신 올린다.
+  "name": "richislet-portal",
+  "compatibility_date": "2026-10-01",
+  "workers_dev": true,
+  "assets": { "directory": "./public", "not_found_handling": "404-page" }
+}

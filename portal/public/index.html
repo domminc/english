@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>richislet</title>
+<meta name="description" content="하루식단과 하루 한 장 영어로 바로 이동합니다.">
+<meta name="theme-color" content="#F2F2F6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B0B0F" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+/* 원칙: 콘텐츠(카드)는 평평하게 두고, 유리 재질은 떠 있는 상단 바에만 쓴다. 그림자 대신 또렷한 가는 테두리를 쓴다. */
+:root {
+  --bg: #F2F2F6;
+  --surface: #FFFFFF;
+  --label: #0E0E12;
+  --label-2: #62626B;
+  --label-3: #A6A6AF;
+  --separator: #E4E4EA;
+  --fill: #E7E7EC;
+  --glass: rgb(255 255 255 / .72);
+  --glass-stroke: rgb(0 0 0 / .08);
+  --food: #1E8E5A;
+  --english: #FF5A1F;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0B0B0F; --surface: #1C1C22; --label: #F5F5F7; --label-2: #A3A3AE; --label-3: #62626C;
+    --separator: #2E2E36; --fill: #2A2A32; --glass: rgb(52 52 60 / .72); --glass-stroke: rgb(255 255 255 / .18);
+    --food: #2FA56E; --english: #FF7A45;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0B0B0F; --surface: #1C1C22; --label: #F5F5F7; --label-2: #A3A3AE; --label-3: #62626C;
+  --separator: #2E2E36; --fill: #2A2A32; --glass: rgb(52 52 60 / .72); --glass-stroke: rgb(255 255 255 / .18);
+  --food: #2FA56E; --english: #FF7A45;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background: var(--bg);
+  color: var(--label);
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  font-size: 17px;
+  line-height: 1.35;
+  letter-spacing: -.005em;
+  word-break: keep-all;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, p, ul { margin: 0; padding: 0; }
+.wrap {
+  width: 100%; max-width: 760px; margin: 0 auto;
+  padding-left: max(20px, env(safe-area-inset-left, 0px));
+  padding-right: max(20px, env(safe-area-inset-right, 0px));
+}
+:focus-visible { outline: 3px solid var(--label); outline-offset: 3px; }
+
+/* 떠 있는 층: 상단 바 */
+.bar {
+  position: sticky; top: 0; z-index: 10;
+  padding-top: calc(env(safe-area-inset-top, 0px) + 10px); padding-bottom: 10px;
+}
+.bar .wrap { display: flex; align-items: center; justify-content: space-between; }
+.pill, .round {
+  background: var(--glass); border: 1px solid var(--glass-stroke);
+  -webkit-backdrop-filter: blur(24px) saturate(180%); backdrop-filter: blur(24px) saturate(180%);
+}
+.pill { height: 44px; padding: 0 18px; border-radius: 22px; display: flex; align-items: center; font-size: 15px; font-weight: 600; }
+.round {
+  appearance: none; width: 44px; height: 44px; border-radius: 50%; padding: 0; cursor: pointer;
+  color: var(--label); display: grid; place-items: center;
+}
+.round svg { width: 20px; height: 20px; }
+@media (prefers-reduced-transparency: reduce) {
+  .pill, .round { background: var(--surface); -webkit-backdrop-filter: none; backdrop-filter: none; }
+}
+
+/* 큰 제목 */
+.head { padding: 28px 0 24px; }
+h1 { font-size: 34px; font-weight: 700; line-height: 1.2; letter-spacing: -.02em; }
+.head p { margin-top: 6px; color: var(--label-2); }
+
+/* 카드: 평평한 면, 가는 테두리, 바깥 반경 30 − 여백 22 = 안쪽 아이콘 반경 ≈ 16 */
+.grid { list-style: none; display: grid; gap: 14px; grid-template-columns: 1fr; }
+@media (min-width: 620px) { .grid { grid-template-columns: 1fr 1fr; gap: 16px; } }
+.card {
+  display: flex; flex-direction: column; gap: 18px; height: 100%;
+  padding: 22px; border-radius: 30px;
+  background: var(--surface); border: 1px solid var(--separator);
+  color: inherit; text-decoration: none;
+  transition: transform .15s ease, background-color .15s ease;
+}
+.card:active { transform: scale(.985); background: color-mix(in srgb, var(--surface) 92%, var(--label)); }
+.icon {
+  width: 60px; height: 60px; border-radius: 16px; display: grid; place-items: center; color: #fff;
+}
+.icon svg { width: 30px; height: 30px; }
+.food .icon { background: var(--food); }
+.english .icon { background: var(--english); }
+.text { display: flex; flex-direction: column; gap: 4px; flex: 1; }
+.card h2 { font-size: 22px; font-weight: 700; letter-spacing: -.01em; }
+.card p { font-size: 15px; color: var(--label-2); }
+.foot { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.host { font-size: 13px; font-weight: 500; color: var(--label-2); min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.go { flex: none; width: 34px; height: 34px; border-radius: 50%; background: var(--fill); display: grid; place-items: center; color: var(--label); }
+.go svg { width: 16px; height: 16px; }
+@media (hover: hover) { .card:hover .go { background: var(--label); color: var(--surface); } }
+
+.note { margin-top: 18px; padding: 0 22px; font-size: 13px; color: var(--label-2); }
+footer { padding: 40px 0 calc(28px + env(safe-area-inset-bottom, 0px)); font-size: 13px; color: var(--label-3); }
+footer .wrap { padding-left: max(42px, env(safe-area-inset-left, 0px)); }
+
+@media (prefers-reduced-motion: reduce) { .card { transition: none; } .card:active { transform: none; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="wrap">
+    <span class="pill">richislet</span>
+    <button class="round" id="theme" type="button" aria-label="화면 모드 바꾸기" title="화면 모드 바꾸기">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="head">
+    <h1>어디로 갈까요?</h1>
+    <p>매일 쓰는 서비스입니다.</p>
+  </div>
+
+  <ul class="grid">
+    <li>
+      <a class="card food" href="https://food.richislet.com/">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3v8M4.5 3v5a2.5 2.5 0 0 0 5 0V3M7 11v10M17 21V3c-2.2 1.2-3.5 3.6-3.5 6.5V13H17"/></svg></span>
+        <span class="text">
+          <h2>하루식단</h2>
+          <p>사진 한 장으로 식사를 기록하고 AI 코치와 함께 식단을 관리합니다.</p>
+        </span>
+        <span class="foot"><span class="host">food.richislet.com</span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></span></span>
+      </a>
+    </li>
+    <li>
+      <a class="card english" href="https://english.richislet.com/">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3.5h7l4 4v13H7zM14 3.5v4h4M10 12.5h5M10 16h5"/></svg></span>
+        <span class="text">
+          <h2>하루 한 장 영어</h2>
+          <p>하루 10~30분, 영어 단어와 문장을 익히고 잊을 때쯤 다시 복습합니다.</p>
+        </span>
+        <span class="foot"><span class="host">english.richislet.com</span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></span></span>
+      </a>
+    </li>
+  </ul>
+
+  <p class="note">서비스마다 계정이 따로 있습니다. 각 서비스에서 로그인해 주세요.</p>
+</main>
+
+<footer><div class="wrap">richislet.com</div></footer>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  try {
+    var saved = localStorage.getItem("gate-theme");
+    if (saved === "light" || saved === "dark") root.setAttribute("data-theme", saved);
+  } catch (e) {}
+  document.getElementById("theme").addEventListener("click", function () {
+    var cur = root.getAttribute("data-theme") ||
+      (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    var next = cur === "dark" ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    try { localStorage.setItem("gate-theme", next); } catch (e) {}
+  });
+})();
+</script>
+</body>
+</html>
