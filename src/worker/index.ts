@@ -313,23 +313,37 @@ app.get('/api/records', async c => {
 /* ---------- 미디어 (R2) ---------- */
 // 파일은 배포 때 미리 만들어 R2 에 올려 둔다. 없으면 404 를 주고, 화면은 브라우저 음성으로 읽거나 이미지를 숨긴다.
 
-async function serve(c: any, key: string, type: string) {
-  const hit = await c.env.MEDIA.get(key);
-  if (!hit) return c.notFound();
-  return new Response(hit.body, { headers: { 'content-type': type, 'cache-control': 'private, max-age=31536000, immutable' } });
+async function serve(c: any, keys: [key: string, type: string][]) {
+  for (const [key, type] of keys) {
+    const hit = await c.env.MEDIA.get(key);
+    if (!hit) continue;
+    return new Response(hit.body, {
+      headers: {
+        'content-type': type,
+        'cache-control': 'private, max-age=31536000, immutable',
+        'x-content-type-options': 'nosniff',
+        // SVG 를 주소창에서 직접 열어도 스크립트가 돌지 않게 한다.
+        'content-security-policy': "default-src 'none'; style-src 'unsafe-inline'; sandbox",
+      },
+    });
+  }
+  return c.notFound();
 }
 
 app.get('/media/audio/:id/:part', c => {
   const id = Number(c.req.param('id'));
   const part = c.req.param('part');
   if (!Number.isInteger(id) || (part !== 'word' && part !== 'example')) return c.notFound();
-  return serve(c, `audio/v1/${id}-${part}.mp3`, 'audio/mpeg');
+  return serve(c, [[`audio/v1/${id}-${part}.mp3`, 'audio/mpeg']]);
 });
 
 app.get('/media/image/:id', c => {
   const id = Number(c.req.param('id'));
   if (!Number.isInteger(id)) return c.notFound();
-  return serve(c, `image/v1/${id}.jpg`, 'image/jpeg');
+  return serve(c, [
+    [`image/v1/${id}.svg`, 'image/svg+xml'],
+    [`image/v1/${id}.jpg`, 'image/jpeg'],
+  ]);
 });
 
 app.all('/api/*', c => c.json({ error: '없는 주소입니다.' }, 404));

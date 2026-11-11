@@ -48,13 +48,14 @@ GitHub Actions 가 배포한다 (`.github/workflows/deploy.yml`). 저장소 Sett
 | `CLOUDFLARE_API_TOKEN` | Workers Scripts 편집, R2 편집, Hyperdrive 편집 권한의 API 토큰 |
 | `CLOUDFLARE_ACCOUNT_ID` | Cloudflare 계정 ID |
 | `NEON_API_KEY` | Neon 계정 API 키 |
+| `ANTHROPIC_API_KEY` | (선택) Claude API 키. 단어 이미지 생성에 쓴다 |
 
 `main` 에 푸시하거나 Actions 화면에서 "배포" 를 직접 실행하면 `scripts/provision.mjs` 가 Neon 프로젝트(`haru-english`), R2 버킷(`haru-english-media`), Hyperdrive 설정(`haru-english-db`)을 없으면 만들고, 스키마와 콘텐츠를 적재한 뒤 Worker 를 배포한다. 토큰은 저장소 파일에 넣지 않는다.
 
 ## 미디어
 
 - 발음 음성: 배포 때 `scripts/upload-audio.sh` 가 오픈소스 음성 합성기 Piper 로 단어와 예문 음성(MP3)을 만들어 R2 의 `audio/v1/` 에 올린다. 유료 서비스를 쓰지 않는다. 단어 목록이 바뀌지 않았으면 건너뛴다.
-- 단어 이미지: R2 의 `image/v1/<단어 id>.jpg` 에 파일이 있으면 단어 카드에 보인다. 아직 올린 이미지는 없고, 없으면 그 자리는 표시하지 않는다.
+- 단어 이미지: Secret `ANTHROPIC_API_KEY` 가 있으면 배포 때 `scripts/make-images.mjs` 가 Claude API 로 단어마다 SVG 그림을 만들어 R2 의 `image/v1/<단어 id>.svg` 에 올린다. 한 번 실행에 `IMAGE_LIMIT` 개(기본 20)만 만들고 다음 실행에서 이어 간다. 저장소 Variable `IMAGE_LIMIT` 로 바꾼다. 그림이 없는 단어는 그 자리를 표시하지 않는다.
 - `/media/*` 는 로그인한 사용자만 요청할 수 있다. 파일이 없으면 발음은 브라우저 음성으로 읽는다.
 
 ## 학습 규칙

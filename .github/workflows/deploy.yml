@@ -2,6 +2,7 @@ name: 배포
 
 # main 에 푸시되거나 Actions 화면에서 직접 실행하면 배포한다.
 # 필요한 Secrets: CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID, NEON_API_KEY
+# 선택 Secret: ANTHROPIC_API_KEY (있으면 단어 이미지를 만든다). 선택 Variable: IMAGE_LIMIT (한 번에 만들 개수, 기본 20)
 on:
   push:
     branches: [main, claude/daily-english-learning-app-0mak5i]
@@ -21,6 +22,7 @@ jobs:
       CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
       NEON_API_KEY: ${{ secrets.NEON_API_KEY }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -54,6 +56,12 @@ jobs:
       - name: 발음 음성 생성과 R2 업로드
         if: steps.secrets.outputs.ready == 'true'
         run: bash scripts/upload-audio.sh
+      - name: 단어 이미지 생성과 R2 업로드 (Claude API)
+        if: steps.secrets.outputs.ready == 'true' && env.ANTHROPIC_API_KEY != ''
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          IMAGE_LIMIT: ${{ vars.IMAGE_LIMIT || '20' }}
+        run: node scripts/make-images.mjs
       - name: Worker 배포
         if: steps.secrets.outputs.ready == 'true'
         run: |
