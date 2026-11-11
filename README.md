@@ -47,7 +47,7 @@ GitHub Actions 가 배포한다 (`.github/workflows/deploy.yml`). 저장소 Sett
 | --- | --- |
 | `CLOUDFLARE_API_TOKEN` | Workers Scripts 편집, R2 편집, Hyperdrive 편집 권한의 API 토큰 |
 | `CLOUDFLARE_ACCOUNT_ID` | Cloudflare 계정 ID |
-| `NEON_API_KEY` | Neon 계정 API 키 |
+| `NEON_API_KEY` | Neon 계정 API 키(`napi_...`), 또는 이미 만든 Neon DB 의 연결 문자열(`postgresql://...`) |
 | `ANTHROPIC_API_KEY` | (선택) Claude API 키. 단어 이미지 생성에 쓴다 |
 
 `main` 에 푸시하거나 Actions 화면에서 "배포" 를 직접 실행하면 `scripts/provision.mjs` 가 Neon 프로젝트(`haru-english`), R2 버킷(`haru-english-media`), Hyperdrive 설정(`haru-english-db`)을 없으면 만들고, 스키마와 콘텐츠를 적재한 뒤 Worker 를 배포한다. 토큰은 저장소 파일에 넣지 않는다.

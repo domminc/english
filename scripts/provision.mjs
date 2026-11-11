@@ -11,7 +11,7 @@ const clean = v => (v ?? '').trim().replace(/^["']|["']$/g, '').replace(/^Bearer
 const cfToken = clean(process.env.CLOUDFLARE_API_TOKEN), account = clean(process.env.CLOUDFLARE_ACCOUNT_ID), neonKey = clean(process.env.NEON_API_KEY);
 const NEON_REGION = process.env.NEON_REGION || 'aws-ap-southeast-1';
 // 값 자체는 찍지 않고, 어떤 종류의 값인지만 알려 준다.
-const kind = /^napi_/.test(neonKey) ? 'Neon API 키 형식(napi_)' : /^postgres(ql)?:\/\//.test(neonKey) ? 'DB 연결 문자열 (API 키가 아님)' : /^npg_/.test(neonKey) ? 'DB 비밀번호 (API 키가 아님)' : /^sk-ant-/.test(neonKey) ? 'Claude API 키 (자리가 바뀜)' : '알 수 없는 형식';
+const kind = /^napi_/.test(neonKey) ? 'Neon API 키 형식(napi_)' : /^postgres(ql)?:\/\//.test(neonKey) ? 'DB 연결 문자열' : /^npg_/.test(neonKey) ? 'DB 비밀번호 (API 키가 아님)' : /^sk-ant-/.test(neonKey) ? 'Claude API 키 (자리가 바뀜)' : '알 수 없는 형식';
 console.log(`NEON_API_KEY: ${kind}, 길이 ${neonKey.length}${neonKey !== (process.env.NEON_API_KEY ?? '') ? ', 앞뒤 공백이나 따옴표를 걷어냄' : ''}`);
 console.log(`CLOUDFLARE_ACCOUNT_ID: ${/^[0-9a-f]{32}$/.test(account) ? '형식 정상' : '32자리 16진수가 아님'}, CLOUDFLARE_API_TOKEN 길이 ${cfToken.length}`);
 for (const [k, v] of Object.entries({ CLOUDFLARE_API_TOKEN: cfToken, CLOUDFLARE_ACCOUNT_ID: account, NEON_API_KEY: neonKey })) {
@@ -34,27 +34,36 @@ const cf = (m, p, b) => call(`https://api.cloudflare.com/client/v4/accounts/${ac
 const fail = (what, r) => { console.error(`${what} 실패 (HTTP ${r.status}): ${r.data?.message ?? r.data?.errors?.[0]?.message ?? '응답을 해석하지 못했습니다'}`); process.exit(1); };
 
 /* 1. Neon */
+// NEON_API_KEY 자리에 DB 연결 문자열이 들어 있으면 이미 만들어 둔 DB 로 보고 그대로 쓴다.
 let uri;
-const list = await neon('GET', '/projects?limit=100');
-if (!list.ok) fail('Neon 프로젝트 조회', list);
-let project = list.data.projects?.find(p => p.name === NAME);
-if (!project) {
-  const made = await neon('POST', '/projects', { project: { name: NAME, region_id: NEON_REGION } });
-  if (!made.ok) fail('Neon 프로젝트 생성', made);
-  project = made.data.project;
-  uri = made.data.connection_uris?.[0]?.connection_uri;
-  console.log(`Neon 프로젝트를 만들었습니다 (${NEON_REGION}).`);
-} else console.log('기존 Neon 프로젝트를 사용합니다.');
-if (!uri) {
-  const branches = await neon('GET', `/projects/${project.id}/branches`);
-  if (!branches.ok) fail('Neon 브랜치 조회', branches);
-  const branch = branches.data.branches.find(b => b.default || b.primary) ?? branches.data.branches[0];
-  const dbs = await neon('GET', `/projects/${project.id}/branches/${branch.id}/databases`);
-  if (!dbs.ok) fail('Neon 데이터베이스 조회', dbs);
-  const db = dbs.data.databases[0];
-  const got = await neon('GET', `/projects/${project.id}/connection_uri?database_name=${encodeURIComponent(db.name)}&role_name=${encodeURIComponent(db.owner_name)}`);
-  if (!got.ok) fail('Neon 연결 문자열 조회', got);
-  uri = got.data.uri;
+if (/^postgres(ql)?:\/\//.test(neonKey)) {
+  const given = new URL(neonKey);
+  given.hostname = given.hostname.replace('-pooler.', '.'); // Hyperdrive 가 풀을 맡으므로 직접 연결 주소를 쓴다
+  given.search = '?sslmode=require';
+  uri = given.toString();
+  console.log('연결 문자열로 받은 기존 Neon DB 를 사용합니다.');
+} else {
+  const list = await neon('GET', '/projects?limit=100');
+  if (!list.ok) fail('Neon 프로젝트 조회', list);
+  let project = list.data.projects?.find(p => p.name === NAME);
+  if (!project) {
+    const made = await neon('POST', '/projects', { project: { name: NAME, region_id: NEON_REGION } });
+    if (!made.ok) fail('Neon 프로젝트 생성', made);
+    project = made.data.project;
+    uri = made.data.connection_uris?.[0]?.connection_uri;
+    console.log(`Neon 프로젝트를 만들었습니다 (${NEON_REGION}).`);
+  } else console.log('기존 Neon 프로젝트를 사용합니다.');
+  if (!uri) {
+    const branches = await neon('GET', `/projects/${project.id}/branches`);
+    if (!branches.ok) fail('Neon 브랜치 조회', branches);
+    const branch = branches.data.branches.find(b => b.default || b.primary) ?? branches.data.branches[0];
+    const dbs = await neon('GET', `/projects/${project.id}/branches/${branch.id}/databases`);
+    if (!dbs.ok) fail('Neon 데이터베이스 조회', dbs);
+    const db = dbs.data.databases[0];
+    const got = await neon('GET', `/projects/${project.id}/connection_uri?database_name=${encodeURIComponent(db.name)}&role_name=${encodeURIComponent(db.owner_name)}`);
+    if (!got.ok) fail('Neon 연결 문자열 조회', got);
+    uri = got.data.uri;
+  }
 }
 const u = new URL(uri);
 const password = decodeURIComponent(u.password);
