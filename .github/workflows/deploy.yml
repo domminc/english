@@ -53,6 +53,11 @@ jobs:
         run: |
           npm run db:migrate
           npm run db:seed
+      - name: Worker 배포
+        if: steps.secrets.outputs.ready == 'true'
+        run: |
+          sed -i 's/"id": "00000000000000000000000000000000"/"id": "${{ steps.provision.outputs.hyperdrive_id }}"/' wrangler.jsonc
+          npm run deploy
       - name: 발음 음성 생성과 R2 업로드
         if: steps.secrets.outputs.ready == 'true'
         run: |
@@ -64,8 +69,3 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           IMAGE_LIMIT: ${{ vars.IMAGE_LIMIT || '20' }}
         run: node scripts/make-images.mjs
-      - name: Worker 배포
-        if: steps.secrets.outputs.ready == 'true'
-        run: |
-          sed -i 's/"id": "00000000000000000000000000000000"/"id": "${{ steps.provision.outputs.hyperdrive_id }}"/' wrangler.jsonc
-          npm run deploy

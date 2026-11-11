@@ -17,7 +17,7 @@
   --scrim: rgb(0 0 0 / 0.28);
   --good: #1e8e5a;
   --bad: #d4372c;
-  --font: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+  --font: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
   --gutter: max(20px, env(safe-area-inset-left, 0px));
   --tabbar-h: 66px;
   color-scheme: light;
