@@ -1,0 +1,9 @@
+{
+  "$schema": "../node_modules/wrangler/config-schema.json",
+  // richislet.com 대문 사이트. 정적 파일만 내려준다.
+  // 도메인(richislet.com, www.richislet.com)은 scripts/portal-domains.mjs 가 식단 앱이 새 주소에서 열리는 것을 확인한 뒤 연결한다.
+  "name": "richislet-portal",
+  "compatibility_date": "2026-10-01",
+  "workers_dev": true,
+  "assets": { "directory": "./public", "not_found_handling": "404-page" }
+}

@@ -52,6 +52,10 @@ GitHub Actions 가 배포한다 (`.github/workflows/deploy.yml`). 저장소 Sett
 
 `main` 에 푸시하거나 Actions 화면에서 "배포" 를 직접 실행하면 `scripts/provision.mjs` 가 Neon 프로젝트(`haru-english`), R2 버킷(`haru-english-media`), Hyperdrive 설정(`haru-english-db`)을 없으면 만들고, 스키마와 콘텐츠를 적재한 뒤 Worker 를 배포한다. 토큰은 저장소 파일에 넣지 않는다.
 
+## 대문 사이트 (richislet.com)
+
+`portal/` 은 richislet.com 에 띄우는 카드형 대문 페이지다. 같은 배포 워크플로가 Worker `richislet-portal` 로 올리고, `scripts/portal-domains.mjs` 가 식단 앱이 `food.richislet.com` 에서 열리는 것을 확인한 뒤에만 `richislet.com` 과 `www.richislet.com` 을 대문으로 넘긴다. 카드를 추가하려면 `portal/public/index.html` 의 목록에 항목을 더한다.
+
 ## 미디어
 
 - 발음 음성: 배포 때 `scripts/upload-audio.sh` 가 오픈소스 음성 합성기 Piper 로 단어와 예문 음성(MP3)을 만들어 R2 의 `audio/v1/` 에 올린다. 유료 서비스를 쓰지 않는다. 단어 목록이 바뀌지 않았으면 건너뛴다.
