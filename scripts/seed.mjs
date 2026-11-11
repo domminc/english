@@ -18,13 +18,12 @@ await sql.begin(async tx => {
         insert into themes (track, level, name, sort_order) values (${data.track}, ${t.level ?? null}, ${t.name}, ${sort})
         on conflict (track, name) do update set level = excluded.level, sort_order = excluded.sort_order returning id`;
       themeCount++;
-      for (const [i, w] of t.words.entries()) {
-        await tx`
-          insert into words (theme_id, word, meaning, example, example_ko, sort_order)
-          values (${theme.id}, ${w.word}, ${w.meaning}, ${w.example}, ${w.example_ko}, ${i + 1})
-          on conflict (theme_id, word) do update set meaning = excluded.meaning, example = excluded.example, example_ko = excluded.example_ko, sort_order = excluded.sort_order`;
-        wordCount++;
-      }
+      // 주제 하나의 단어를 한 번에 넣는다.
+      const rows = t.words.map((w, i) => ({ theme_id: theme.id, word: w.word, meaning: w.meaning, example: w.example, example_ko: w.example_ko, sort_order: i + 1 }));
+      await tx`
+        insert into words ${tx(rows, 'theme_id', 'word', 'meaning', 'example', 'example_ko', 'sort_order')}
+        on conflict (theme_id, word) do update set meaning = excluded.meaning, example = excluded.example, example_ko = excluded.example_ko, sort_order = excluded.sort_order`;
+      wordCount += rows.length;
     }
   }
 });

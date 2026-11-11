@@ -55,7 +55,9 @@ jobs:
           npm run db:seed
       - name: 발음 음성 생성과 R2 업로드
         if: steps.secrets.outputs.ready == 'true'
-        run: bash scripts/upload-audio.sh
+        run: |
+          command -v ffmpeg >/dev/null || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null)
+          bash scripts/upload-audio.sh
       - name: 단어 이미지 생성과 R2 업로드 (Claude API)
         if: steps.secrets.outputs.ready == 'true' && env.ANTHROPIC_API_KEY != ''
         env:
