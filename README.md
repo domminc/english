@@ -41,10 +41,15 @@ npm run content:check
 
 ## 배포
 
-1. Neon 에 프로젝트를 만들고 연결 문자열로 `npm run db:migrate`, `npm run db:seed` 를 실행한다.
-2. `wrangler hyperdrive create haru-english-db --connection-string="<Neon 연결 문자열>"` 로 만든 ID 를 `wrangler.jsonc` 의 `hyperdrive[0].id` 에 넣는다.
-3. `wrangler r2 bucket create haru-english-media`
-4. `npm run deploy`
+GitHub Actions 가 배포한다 (`.github/workflows/deploy.yml`). 저장소 Settings → Secrets and variables → Actions 에 세 값을 넣는다.
+
+| Secret | 값 |
+| --- | --- |
+| `CLOUDFLARE_API_TOKEN` | Workers Scripts 편집, R2 편집, Hyperdrive 편집, Workers AI 읽기 권한의 API 토큰 |
+| `CLOUDFLARE_ACCOUNT_ID` | Cloudflare 계정 ID |
+| `NEON_API_KEY` | Neon 계정 API 키 |
+
+`main` 에 푸시하거나 Actions 화면에서 "배포" 를 직접 실행하면 `scripts/provision.mjs` 가 Neon 프로젝트(`haru-english`), R2 버킷(`haru-english-media`), Hyperdrive 설정(`haru-english-db`)을 없으면 만들고, 스키마와 콘텐츠를 적재한 뒤 Worker 를 배포한다. 토큰은 저장소 파일에 넣지 않는다.
 
 ## 미디어
 
