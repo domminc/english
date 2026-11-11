@@ -73,8 +73,3 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           IMAGE_LIMIT: ${{ vars.IMAGE_LIMIT || '20' }}
         run: node scripts/make-images.mjs
-      - name: 대문 사이트(richislet.com) 배포
-        if: steps.secrets.outputs.ready == 'true'
-        run: |
-          npx wrangler deploy -c portal/wrangler.jsonc
-          node scripts/portal-domains.mjs
