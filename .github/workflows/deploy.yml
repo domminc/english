@@ -57,7 +57,11 @@ jobs:
         if: steps.secrets.outputs.ready == 'true'
         run: |
           sed -i 's/"id": "00000000000000000000000000000000"/"id": "${{ steps.provision.outputs.hyperdrive_id }}"/' wrangler.jsonc
-          npm run deploy
+          if ! npm run deploy; then
+            echo "::warning::english.richislet.com 연결에 실패해 workers.dev 주소로만 배포합니다. 토큰에 해당 도메인(Zone)의 Workers Routes 편집 권한이 있는지 확인해 주세요."
+            sed -i '/"routes": \[/d' wrangler.jsonc
+            npm run deploy
+          fi
       - name: 발음 음성 생성과 R2 업로드
         if: steps.secrets.outputs.ready == 'true'
         run: |
