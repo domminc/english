@@ -6,7 +6,14 @@ import { appendFileSync } from 'node:fs';
 const NAME = 'haru-english';
 const BUCKET = 'haru-english-media';
 const HYPERDRIVE = 'haru-english-db';
-const { CLOUDFLARE_API_TOKEN: cfToken, CLOUDFLARE_ACCOUNT_ID: account, NEON_API_KEY: neonKey, NEON_REGION = 'aws-ap-southeast-1' } = process.env;
+// 붙여 넣을 때 섞이기 쉬운 공백, 줄바꿈, 따옴표, "Bearer " 접두어를 걷어낸다.
+const clean = v => (v ?? '').trim().replace(/^["']|["']$/g, '').replace(/^Bearer\s+/i, '').trim();
+const cfToken = clean(process.env.CLOUDFLARE_API_TOKEN), account = clean(process.env.CLOUDFLARE_ACCOUNT_ID), neonKey = clean(process.env.NEON_API_KEY);
+const NEON_REGION = process.env.NEON_REGION || 'aws-ap-southeast-1';
+// 값 자체는 찍지 않고, 어떤 종류의 값인지만 알려 준다.
+const kind = /^napi_/.test(neonKey) ? 'Neon API 키 형식(napi_)' : /^postgres(ql)?:\/\//.test(neonKey) ? 'DB 연결 문자열 (API 키가 아님)' : /^npg_/.test(neonKey) ? 'DB 비밀번호 (API 키가 아님)' : /^sk-ant-/.test(neonKey) ? 'Claude API 키 (자리가 바뀜)' : '알 수 없는 형식';
+console.log(`NEON_API_KEY: ${kind}, 길이 ${neonKey.length}${neonKey !== (process.env.NEON_API_KEY ?? '') ? ', 앞뒤 공백이나 따옴표를 걷어냄' : ''}`);
+console.log(`CLOUDFLARE_ACCOUNT_ID: ${/^[0-9a-f]{32}$/.test(account) ? '형식 정상' : '32자리 16진수가 아님'}, CLOUDFLARE_API_TOKEN 길이 ${cfToken.length}`);
 for (const [k, v] of Object.entries({ CLOUDFLARE_API_TOKEN: cfToken, CLOUDFLARE_ACCOUNT_ID: account, NEON_API_KEY: neonKey })) {
   if (!v) { console.error(`${k} 가 없습니다. 저장소 Settings → Secrets and variables → Actions 에 추가해 주세요.`); process.exit(1); }
 }
