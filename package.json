@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite build && wrangler dev -c wrangler.local.jsonc",
+    "dev": "vite build && wrangler dev",
     "build": "vite build",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",

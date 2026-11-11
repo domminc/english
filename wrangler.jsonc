@@ -10,7 +10,7 @@
     "not_found_handling": "single-page-application",
     "run_worker_first": ["/api/*", "/media/*"]
   },
-  // 배포 전에 `wrangler hyperdrive create` 로 만든 ID 로 바꾼다.
+  // 배포 워크플로가 실제 Hyperdrive ID 로 바꿔 넣는다. 로컬에서는 localConnectionString 을 쓴다.
   "hyperdrive": [
     {
       "binding": "HYPERDRIVE",
@@ -19,7 +19,5 @@
     }
   ],
   "r2_buckets": [{ "binding": "MEDIA", "bucket_name": "haru-english-media" }],
-  // 발음 음성과 단어 이미지를 처음 요청될 때 만들어 R2 에 저장한다. 없으면 생성 없이 R2 에 있는 파일만 내려준다.
-  "ai": { "binding": "AI" },
   "observability": { "enabled": true }
 }

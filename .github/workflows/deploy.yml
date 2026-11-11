@@ -51,6 +51,9 @@ jobs:
         run: |
           npm run db:migrate
           npm run db:seed
+      - name: 발음 음성 생성과 R2 업로드
+        if: steps.secrets.outputs.ready == 'true'
+        run: bash scripts/upload-audio.sh
       - name: Worker 배포
         if: steps.secrets.outputs.ready == 'true'
         run: |

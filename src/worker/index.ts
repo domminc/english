@@ -7,10 +7,7 @@ import { COURSES, KINDS, type CourseMin, type Kind, addDays, grade, nextBox, str
 type Env = {
   HYPERDRIVE: Hyperdrive;
   MEDIA: R2Bucket;
-  AI?: Ai;
   ASSETS: Fetcher;
-  TTS_MODEL?: string;
-  IMAGE_MODEL?: string;
 };
 type User = {
   id: string;
@@ -314,53 +311,25 @@ app.get('/api/records', async c => {
 });
 
 /* ---------- 미디어 (R2) ---------- */
+// 파일은 배포 때 미리 만들어 R2 에 올려 둔다. 없으면 404 를 주고, 화면은 브라우저 음성으로 읽거나 이미지를 숨긴다.
 
-const mediaHeaders = (type: string) => ({ 'content-type': type, 'cache-control': 'private, max-age=31536000, immutable' });
-
-async function toBytes(out: unknown, field: 'audio' | 'image'): Promise<Uint8Array | null> {
-  if (out instanceof ReadableStream) return new Uint8Array(await new Response(out).arrayBuffer());
-  if (out instanceof ArrayBuffer) return new Uint8Array(out);
-  if (out instanceof Uint8Array) return out;
-  const b64 = (out as Record<string, unknown> | null)?.[field];
-  return typeof b64 === 'string' ? Uint8Array.from(atob(b64), ch => ch.charCodeAt(0)) : null;
+async function serve(c: any, key: string, type: string) {
+  const hit = await c.env.MEDIA.get(key);
+  if (!hit) return c.notFound();
+  return new Response(hit.body, { headers: { 'content-type': type, 'cache-control': 'private, max-age=31536000, immutable' } });
 }
 
-// 발음 음성: R2 에 있으면 그대로, 없으면 한 번 만들어 저장한다.
-app.get('/media/audio/:id/:part', async c => {
+app.get('/media/audio/:id/:part', c => {
   const id = Number(c.req.param('id'));
   const part = c.req.param('part');
   if (!Number.isInteger(id) || (part !== 'word' && part !== 'example')) return c.notFound();
-  const key = `audio/v1/${id}-${part}.mp3`;
-  const hit = await c.env.MEDIA.get(key);
-  if (hit) return new Response(hit.body, { headers: mediaHeaders('audio/mpeg') });
-  if (!c.env.AI) return c.notFound();
-  const [word] = await c.var.sql<{ word: string; example: string }[]>`select word, example from words where id = ${id}`;
-  if (!word) return c.notFound();
-  const model = c.env.TTS_MODEL ?? '@cf/deepgram/aura-2-en';
-  const out = await c.env.AI.run(model as any, { text: part === 'word' ? word.word : word.example, speaker: 'luna', encoding: 'mp3' } as any);
-  const bytes = await toBytes(out, 'audio');
-  if (!bytes?.length) return c.notFound();
-  await c.env.MEDIA.put(key, bytes, { httpMetadata: { contentType: 'audio/mpeg' } });
-  return new Response(bytes as BodyInit, { headers: mediaHeaders('audio/mpeg') });
+  return serve(c, `audio/v1/${id}-${part}.mp3`, 'audio/mpeg');
 });
 
-// 단어 이미지: 예문 장면을 그림으로 만든다. 글자는 넣지 않는다.
-app.get('/media/image/:id', async c => {
+app.get('/media/image/:id', c => {
   const id = Number(c.req.param('id'));
   if (!Number.isInteger(id)) return c.notFound();
-  const key = `image/v1/${id}.jpg`;
-  const hit = await c.env.MEDIA.get(key);
-  if (hit) return new Response(hit.body, { headers: mediaHeaders('image/jpeg') });
-  if (!c.env.AI) return c.notFound();
-  const [word] = await c.var.sql<{ word: string; example: string }[]>`select word, example from words where id = ${id}`;
-  if (!word) return c.notFound();
-  const model = c.env.IMAGE_MODEL ?? '@cf/black-forest-labs/flux-1-schnell';
-  const prompt = `Minimal flat editorial illustration of this scene: "${word.example}" Focus on the idea of "${word.word}". Soft warm light gray background, limited palette with one orange accent, simple shapes, generous empty space, no text, no letters, no words.`;
-  const out = await c.env.AI.run(model as any, { prompt, steps: 4, seed: id } as any);
-  const bytes = await toBytes(out, 'image');
-  if (!bytes?.length) return c.notFound();
-  await c.env.MEDIA.put(key, bytes, { httpMetadata: { contentType: 'image/jpeg' } });
-  return new Response(bytes as BodyInit, { headers: mediaHeaders('image/jpeg') });
+  return serve(c, `image/v1/${id}.jpg`, 'image/jpeg');
 });
 
 app.all('/api/*', c => c.json({ error: '없는 주소입니다.' }, 404));

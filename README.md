@@ -19,7 +19,7 @@
 
 ## 로컬 실행
 
-Postgres 가 `127.0.0.1:5433` 에 `haru` DB 로 떠 있어야 한다 (`wrangler.local.jsonc` 의 `localConnectionString`).
+Postgres 가 `127.0.0.1:5433` 에 `haru` DB 로 떠 있어야 한다 (`wrangler.jsonc` 의 `localConnectionString`).
 
 ```sh
 npm install
@@ -29,7 +29,7 @@ npm run db:seed
 npm run dev        # http://localhost:8787
 ```
 
-로컬 설정에는 Workers AI 바인딩이 없어서 음성과 이미지는 만들지 않는다. 발음은 브라우저 음성으로 대신 나온다.
+로컬 R2 에는 음성 파일이 없어서 발음은 브라우저 음성으로 나온다.
 
 ## 검사
 
@@ -45,7 +45,7 @@ GitHub Actions 가 배포한다 (`.github/workflows/deploy.yml`). 저장소 Sett
 
 | Secret | 값 |
 | --- | --- |
-| `CLOUDFLARE_API_TOKEN` | Workers Scripts 편집, R2 편집, Hyperdrive 편집, Workers AI 읽기 권한의 API 토큰 |
+| `CLOUDFLARE_API_TOKEN` | Workers Scripts 편집, R2 편집, Hyperdrive 편집 권한의 API 토큰 |
 | `CLOUDFLARE_ACCOUNT_ID` | Cloudflare 계정 ID |
 | `NEON_API_KEY` | Neon 계정 API 키 |
 
@@ -53,7 +53,9 @@ GitHub Actions 가 배포한다 (`.github/workflows/deploy.yml`). 저장소 Sett
 
 ## 미디어
 
-`/media/audio/:id/word|example`, `/media/image/:id` 는 R2 에 파일이 있으면 그대로 내려주고, 없으면 Workers AI 로 한 번 만들어 R2 에 저장한다. 로그인한 사용자만 요청할 수 있다. 모델은 `TTS_MODEL`, `IMAGE_MODEL` 변수로 바꿀 수 있다.
+- 발음 음성: 배포 때 `scripts/upload-audio.sh` 가 오픈소스 음성 합성기 Piper 로 단어와 예문 음성(MP3)을 만들어 R2 의 `audio/v1/` 에 올린다. 유료 서비스를 쓰지 않는다. 단어 목록이 바뀌지 않았으면 건너뛴다.
+- 단어 이미지: R2 의 `image/v1/<단어 id>.jpg` 에 파일이 있으면 단어 카드에 보인다. 아직 올린 이미지는 없고, 없으면 그 자리는 표시하지 않는다.
+- `/media/*` 는 로그인한 사용자만 요청할 수 있다. 파일이 없으면 발음은 브라우저 음성으로 읽는다.
 
 ## 학습 규칙
 
