@@ -11,7 +11,8 @@
     "directory": "./dist/client",
     "binding": "ASSETS",
     "not_found_handling": "single-page-application",
-    "run_worker_first": ["/api/*", "/media/*"]
+    // 모든 요청이 Worker 를 먼저 거친다. http 요청을 https 로 넘기기 위해서다.
+    "run_worker_first": true
   },
   // 배포 워크플로가 실제 Hyperdrive ID 로 바꿔 넣는다. 로컬에서는 localConnectionString 을 쓴다.
   "hyperdrive": [

@@ -26,7 +26,7 @@ const WORD_COLS = ['id', 'theme_id', 'word', 'meaning', 'example', 'example_ko']
 const app = new Hono<Ctx>();
 
 // 요청마다 DB 클라이언트를 만든다. 실제 연결 풀은 Hyperdrive 가 관리한다.
-app.use('*', async (c, next) => {
+const withDb = async (c: any, next: () => Promise<void>) => {
   const sql = postgres(c.env.HYPERDRIVE.connectionString, { max: 5, fetch_types: false, prepare: true, onnotice: () => {} });
   c.set('sql', sql);
   try {
@@ -34,7 +34,9 @@ app.use('*', async (c, next) => {
   } finally {
     c.executionCtx.waitUntil(sql.end({ timeout: 5 }));
   }
-});
+};
+app.use('/api/*', withDb);
+app.use('/media/*', withDb);
 
 // 다른 출처에서 온 변경 요청은 받지 않는다.
 app.use('/api/*', async (c, next) => {
@@ -348,4 +350,21 @@ app.get('/media/image/:id', c => {
 
 app.all('/api/*', c => c.json({ error: '없는 주소입니다.' }, 404));
 
-export default app;
+const HSTS = 'max-age=15552000'; // 6개월
+
+export default {
+  async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
+    const url = new URL(request.url);
+    // http 로 들어온 요청은 같은 주소의 https 로 넘긴다.
+    // cf-ray 는 Cloudflare 를 실제로 거친 요청에만 붙으므로, 로컬 개발(wrangler dev)에서는 넘기지 않는다.
+    if (url.protocol === 'http:' && request.headers.has('cf-ray')) {
+      url.protocol = 'https:';
+      return Response.redirect(url.toString(), 301);
+    }
+    const dynamic = url.pathname.startsWith('/api/') || url.pathname.startsWith('/media/');
+    const res = dynamic ? await app.fetch(request, env, ctx) : await env.ASSETS.fetch(request);
+    const out = new Response(res.body, res);
+    out.headers.set('strict-transport-security', HSTS);
+    return out;
+  },
+};
