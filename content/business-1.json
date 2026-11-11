@@ -1,0 +1,785 @@
+{
+ "track": "business",
+ "themes": [
+  {
+   "name": "회의",
+   "words": [
+    {
+     "word": "agenda",
+     "meaning": "안건, 의제",
+     "example": "What is on the agenda today?",
+     "example_ko": "오늘 안건이 뭐죠?"
+    },
+    {
+     "word": "postpone",
+     "meaning": "연기하다",
+     "example": "We need to postpone the meeting.",
+     "example_ko": "회의를 연기해야 해요."
+    },
+    {
+     "word": "attend",
+     "meaning": "참석하다",
+     "example": "I can't attend the meeting tomorrow.",
+     "example_ko": "내일 회의에 참석할 수 없어요."
+    },
+    {
+     "word": "summarize",
+     "meaning": "요약하다",
+     "example": "Let me summarize the main points.",
+     "example_ko": "핵심 내용을 요약해 드릴게요."
+    },
+    {
+     "word": "clarify",
+     "meaning": "명확히 하다",
+     "example": "Could you clarify that point?",
+     "example_ko": "그 부분을 명확히 설명해 주시겠어요?"
+    },
+    {
+     "word": "propose",
+     "meaning": "제안하다",
+     "example": "I propose a different approach.",
+     "example_ko": "다른 접근 방식을 제안합니다."
+    },
+    {
+     "word": "agree",
+     "meaning": "동의하다",
+     "example": "I agree with your opinion.",
+     "example_ko": "당신 의견에 동의해요."
+    },
+    {
+     "word": "deadline",
+     "meaning": "마감 기한",
+     "example": "The deadline is next Friday.",
+     "example_ko": "마감은 다음 주 금요일이에요."
+    },
+    {
+     "word": "priority",
+     "meaning": "우선순위",
+     "example": "Quality is our top priority.",
+     "example_ko": "품질이 우리의 최우선 순위예요."
+    },
+    {
+     "word": "feedback",
+     "meaning": "의견, 피드백",
+     "example": "Thank you for your honest feedback.",
+     "example_ko": "솔직한 피드백 감사합니다."
+    }
+   ]
+  },
+  {
+   "name": "이메일",
+   "words": [
+    {
+     "word": "attach",
+     "meaning": "첨부하다",
+     "example": "I will attach the file to this email.",
+     "example_ko": "이 메일에 파일을 첨부할게요."
+    },
+    {
+     "word": "confirm",
+     "meaning": "확인하다, 확정하다",
+     "example": "Please confirm your schedule by Monday.",
+     "example_ko": "월요일까지 일정을 확정해 주세요."
+    },
+    {
+     "word": "reply",
+     "meaning": "답장하다",
+     "example": "I will reply to you by tomorrow.",
+     "example_ko": "내일까지 답장 드릴게요."
+    },
+    {
+     "word": "forward",
+     "meaning": "전달하다",
+     "example": "Could you forward that email to me?",
+     "example_ko": "그 메일을 저에게 전달해 주시겠어요?"
+    },
+    {
+     "word": "request",
+     "meaning": "요청하다",
+     "example": "I would like to request a quote.",
+     "example_ko": "견적을 요청드리고 싶습니다."
+    },
+    {
+     "word": "inform",
+     "meaning": "알리다",
+     "example": "Please inform me of any changes.",
+     "example_ko": "변경 사항이 있으면 알려 주세요."
+    },
+    {
+     "word": "apologize",
+     "meaning": "사과하다",
+     "example": "I apologize for the late response.",
+     "example_ko": "답변이 늦어 죄송합니다."
+    },
+    {
+     "word": "remind",
+     "meaning": "상기시키다",
+     "example": "Let me remind you about the deadline.",
+     "example_ko": "마감 기한을 다시 알려 드립니다."
+    },
+    {
+     "word": "regarding",
+     "meaning": "~에 관하여",
+     "example": "I am writing regarding your order.",
+     "example_ko": "주문 건에 관해 메일 드립니다."
+    },
+    {
+     "word": "available",
+     "meaning": "시간이 되는, 이용 가능한",
+     "example": "Are you available this afternoon?",
+     "example_ko": "오늘 오후에 시간 되세요?"
+    }
+   ]
+  },
+  {
+   "name": "IT 기획",
+   "words": [
+    {
+     "word": "requirement",
+     "meaning": "요구 사항",
+     "example": "This requirement is not clear yet.",
+     "example_ko": "이 요구 사항은 아직 명확하지 않아요."
+    },
+    {
+     "word": "feature",
+     "meaning": "기능",
+     "example": "Users love this new feature.",
+     "example_ko": "사용자들이 이 새 기능을 좋아해요."
+    },
+    {
+     "word": "launch",
+     "meaning": "출시하다",
+     "example": "We plan to launch the app in March.",
+     "example_ko": "3월에 앱을 출시할 계획이에요."
+    },
+    {
+     "word": "prototype",
+     "meaning": "시제품, 프로토타입",
+     "example": "I made a prototype in Figma.",
+     "example_ko": "피그마로 프로토타입을 만들었어요."
+    },
+    {
+     "word": "estimate",
+     "meaning": "추정하다, 견적",
+     "example": "Can you estimate the development time?",
+     "example_ko": "개발 기간을 추정해 주실 수 있나요?"
+    },
+    {
+     "word": "scope",
+     "meaning": "범위",
+     "example": "That is outside the project scope.",
+     "example_ko": "그건 프로젝트 범위 밖이에요."
+    },
+    {
+     "word": "schedule",
+     "meaning": "일정",
+     "example": "The schedule is very tight.",
+     "example_ko": "일정이 아주 빠듯해요."
+    },
+    {
+     "word": "release",
+     "meaning": "배포하다, 출시",
+     "example": "We release a new version every month.",
+     "example_ko": "우리는 매달 새 버전을 배포해요."
+    },
+    {
+     "word": "review",
+     "meaning": "검토하다",
+     "example": "Please review the document before the meeting.",
+     "example_ko": "회의 전에 문서를 검토해 주세요."
+    },
+    {
+     "word": "approve",
+     "meaning": "승인하다",
+     "example": "The client needs to approve the design.",
+     "example_ko": "고객이 디자인을 승인해야 해요."
+    }
+   ]
+  },
+  {
+   "name": "개발 협업",
+   "words": [
+    {
+     "word": "deploy",
+     "meaning": "배포하다",
+     "example": "We deploy the code every Tuesday.",
+     "example_ko": "우리는 매주 화요일에 코드를 배포해요."
+    },
+    {
+     "word": "bug",
+     "meaning": "오류, 버그",
+     "example": "I found a bug on the login page.",
+     "example_ko": "로그인 페이지에서 버그를 발견했어요."
+    },
+    {
+     "word": "update",
+     "meaning": "업데이트하다",
+     "example": "Please update the test scenario.",
+     "example_ko": "테스트 시나리오를 업데이트해 주세요."
+    },
+    {
+     "word": "test",
+     "meaning": "시험하다, 테스트",
+     "example": "We test every feature before release.",
+     "example_ko": "출시 전에 모든 기능을 테스트해요."
+    },
+    {
+     "word": "issue",
+     "meaning": "문제, 이슈",
+     "example": "This issue happens only on mobile.",
+     "example_ko": "이 문제는 모바일에서만 발생해요."
+    },
+    {
+     "word": "resolve",
+     "meaning": "해결하다",
+     "example": "We must resolve this problem today.",
+     "example_ko": "오늘 이 문제를 해결해야 해요."
+    },
+    {
+     "word": "improve",
+     "meaning": "개선하다",
+     "example": "We want to improve the loading speed.",
+     "example_ko": "로딩 속도를 개선하고 싶어요."
+    },
+    {
+     "word": "maintain",
+     "meaning": "유지 보수하다",
+     "example": "Who will maintain this system?",
+     "example_ko": "이 시스템은 누가 유지 보수하나요?"
+    },
+    {
+     "word": "integrate",
+     "meaning": "통합하다, 연동하다",
+     "example": "We need to integrate the payment service.",
+     "example_ko": "결제 서비스를 연동해야 해요."
+    },
+    {
+     "word": "document",
+     "meaning": "문서, 문서화하다",
+     "example": "Please read the document first.",
+     "example_ko": "먼저 문서를 읽어 주세요."
+    }
+   ]
+  },
+  {
+   "name": "일상",
+   "words": [
+    {
+     "word": "grab",
+     "meaning": "(간단히) 먹다, 잡다",
+     "example": "Let's grab a coffee after lunch.",
+     "example_ko": "점심 먹고 커피 한잔해요."
+    },
+    {
+     "word": "borrow",
+     "meaning": "빌리다",
+     "example": "Can I borrow your pen?",
+     "example_ko": "펜 좀 빌려도 될까요?"
+    },
+    {
+     "word": "forget",
+     "meaning": "잊다",
+     "example": "Don't forget your umbrella.",
+     "example_ko": "우산 잊지 마세요."
+    },
+    {
+     "word": "order",
+     "meaning": "주문하다",
+     "example": "I would like to order a sandwich.",
+     "example_ko": "샌드위치를 주문하고 싶어요."
+    },
+    {
+     "word": "recommend",
+     "meaning": "추천하다",
+     "example": "What do you recommend here?",
+     "example_ko": "여기서 뭘 추천하세요?"
+    },
+    {
+     "word": "prefer",
+     "meaning": "선호하다",
+     "example": "I prefer tea to coffee.",
+     "example_ko": "저는 커피보다 차를 좋아해요."
+    },
+    {
+     "word": "decide",
+     "meaning": "결정하다",
+     "example": "I can't decide what to eat.",
+     "example_ko": "뭘 먹을지 결정을 못 하겠어요."
+    },
+    {
+     "word": "wait",
+     "meaning": "기다리다",
+     "example": "Please wait here for a moment.",
+     "example_ko": "여기서 잠시 기다려 주세요."
+    },
+    {
+     "word": "hurry",
+     "meaning": "서두르다",
+     "example": "We have to hurry to the station.",
+     "example_ko": "역까지 서둘러야 해요."
+    },
+    {
+     "word": "relax",
+     "meaning": "쉬다, 긴장을 풀다",
+     "example": "I just want to relax at home.",
+     "example_ko": "그냥 집에서 쉬고 싶어요."
+    }
+   ]
+  },
+  {
+   "name": "여행",
+   "words": [
+    {
+     "word": "reserve",
+     "meaning": "예약하다",
+     "example": "I would like to reserve a table.",
+     "example_ko": "테이블을 예약하고 싶어요."
+    },
+    {
+     "word": "depart",
+     "meaning": "출발하다",
+     "example": "The train will depart at nine.",
+     "example_ko": "기차는 9시에 출발해요."
+    },
+    {
+     "word": "arrive",
+     "meaning": "도착하다",
+     "example": "We will arrive in London tonight.",
+     "example_ko": "오늘 밤 런던에 도착해요."
+    },
+    {
+     "word": "delay",
+     "meaning": "지연, 지연시키다",
+     "example": "There is a delay of two hours.",
+     "example_ko": "두 시간 지연되고 있어요."
+    },
+    {
+     "word": "luggage",
+     "meaning": "짐, 수하물",
+     "example": "Where can I pick up my luggage?",
+     "example_ko": "짐은 어디서 찾나요?"
+    },
+    {
+     "word": "direction",
+     "meaning": "방향, 길 안내",
+     "example": "Which direction is the subway station?",
+     "example_ko": "지하철역은 어느 방향이에요?"
+    },
+    {
+     "word": "transfer",
+     "meaning": "갈아타다, 환승",
+     "example": "You have to transfer at the next stop.",
+     "example_ko": "다음 정거장에서 갈아타야 해요."
+    },
+    {
+     "word": "fare",
+     "meaning": "요금",
+     "example": "How much is the bus fare?",
+     "example_ko": "버스 요금이 얼마예요?"
+    },
+    {
+     "word": "check in",
+     "meaning": "체크인하다",
+     "example": "We can check in after three.",
+     "example_ko": "3시 이후에 체크인할 수 있어요."
+    },
+    {
+     "word": "souvenir",
+     "meaning": "기념품",
+     "example": "I bought a souvenir for my family.",
+     "example_ko": "가족에게 줄 기념품을 샀어요."
+    }
+   ]
+  },
+  {
+   "name": "마케팅",
+   "words": [
+    {
+     "word": "campaign",
+     "meaning": "캠페인",
+     "example": "The new campaign starts next week.",
+     "example_ko": "새 캠페인이 다음 주에 시작해요."
+    },
+    {
+     "word": "target",
+     "meaning": "목표, 대상",
+     "example": "Our target is young office workers.",
+     "example_ko": "우리의 대상은 젊은 직장인이에요."
+    },
+    {
+     "word": "audience",
+     "meaning": "청중, 고객층",
+     "example": "Who is the audience for this ad?",
+     "example_ko": "이 광고의 고객층은 누구인가요?"
+    },
+    {
+     "word": "brand",
+     "meaning": "브랜드",
+     "example": "People trust this brand.",
+     "example_ko": "사람들은 이 브랜드를 신뢰해요."
+    },
+    {
+     "word": "promote",
+     "meaning": "홍보하다",
+     "example": "We promote our products on social media.",
+     "example_ko": "우리는 SNS로 제품을 홍보해요."
+    },
+    {
+     "word": "budget",
+     "meaning": "예산",
+     "example": "We have a limited budget this year.",
+     "example_ko": "올해는 예산이 한정되어 있어요."
+    },
+    {
+     "word": "revenue",
+     "meaning": "매출, 수익",
+     "example": "Our revenue grew by ten percent.",
+     "example_ko": "매출이 10퍼센트 늘었어요."
+    },
+    {
+     "word": "customer",
+     "meaning": "고객",
+     "example": "Every customer wants fast delivery.",
+     "example_ko": "모든 고객은 빠른 배송을 원해요."
+    },
+    {
+     "word": "survey",
+     "meaning": "설문 조사",
+     "example": "Please take our short survey.",
+     "example_ko": "짧은 설문 조사에 참여해 주세요."
+    },
+    {
+     "word": "trend",
+     "meaning": "유행, 추세",
+     "example": "This trend will not last long.",
+     "example_ko": "이 유행은 오래가지 않을 거예요."
+    }
+   ]
+  },
+  {
+   "name": "의견과 감정",
+   "words": [
+    {
+     "word": "honestly",
+     "meaning": "솔직히",
+     "example": "I honestly don't know the answer.",
+     "example_ko": "솔직히 답을 모르겠어요."
+    },
+    {
+     "word": "actually",
+     "meaning": "사실은",
+     "example": "It was actually easier than I thought.",
+     "example_ko": "사실 생각보다 쉬웠어요."
+    },
+    {
+     "word": "definitely",
+     "meaning": "분명히, 꼭",
+     "example": "I will definitely be there on time.",
+     "example_ko": "꼭 제시간에 갈게요."
+    },
+    {
+     "word": "probably",
+     "meaning": "아마도",
+     "example": "It will probably rain this evening.",
+     "example_ko": "아마 오늘 저녁에 비가 올 거예요."
+    },
+    {
+     "word": "exactly",
+     "meaning": "정확히",
+     "example": "That is exactly what I meant.",
+     "example_ko": "그게 바로 제가 말한 거예요."
+    },
+    {
+     "word": "worried",
+     "meaning": "걱정하는",
+     "example": "I am worried about the result.",
+     "example_ko": "결과가 걱정돼요."
+    },
+    {
+     "word": "confident",
+     "meaning": "자신 있는",
+     "example": "She is confident about her plan.",
+     "example_ko": "그녀는 자기 계획에 자신 있어요."
+    },
+    {
+     "word": "grateful",
+     "meaning": "고마워하는",
+     "example": "I am grateful for your help.",
+     "example_ko": "도와주셔서 감사해요."
+    },
+    {
+     "word": "curious",
+     "meaning": "궁금한",
+     "example": "I am curious about your new job.",
+     "example_ko": "새 직장이 어떤지 궁금해요."
+    },
+    {
+     "word": "disappointed",
+     "meaning": "실망한",
+     "example": "He was disappointed with the service.",
+     "example_ko": "그는 서비스에 실망했어요."
+    }
+   ]
+  },
+  {
+   "name": "구동사",
+   "words": [
+    {
+     "word": "figure out",
+     "meaning": "알아내다, 이해하다",
+     "example": "I can't figure out this problem.",
+     "example_ko": "이 문제를 도저히 모르겠어요."
+    },
+    {
+     "word": "look into",
+     "meaning": "조사하다, 살펴보다",
+     "example": "I will look into it right away.",
+     "example_ko": "바로 살펴볼게요."
+    },
+    {
+     "word": "set up",
+     "meaning": "설정하다, 마련하다",
+     "example": "Let's set up a meeting next week.",
+     "example_ko": "다음 주에 회의를 잡읍시다."
+    },
+    {
+     "word": "follow up",
+     "meaning": "후속 조치를 하다",
+     "example": "I will follow up with the client.",
+     "example_ko": "고객에게 후속 연락을 할게요."
+    },
+    {
+     "word": "point out",
+     "meaning": "지적하다",
+     "example": "Thank you for the chance to point out the risk.",
+     "example_ko": "위험을 짚을 기회를 주셔서 감사해요."
+    },
+    {
+     "word": "come up with",
+     "meaning": "(생각을) 떠올리다",
+     "example": "We need to come up with a new idea.",
+     "example_ko": "새로운 아이디어를 내야 해요."
+    },
+    {
+     "word": "run out of",
+     "meaning": "~이 다 떨어지다",
+     "example": "We may run out of time soon.",
+     "example_ko": "곧 시간이 부족해질 수 있어요."
+    },
+    {
+     "word": "catch up",
+     "meaning": "따라잡다, 밀린 얘기를 하다",
+     "example": "Let's catch up over lunch.",
+     "example_ko": "점심 먹으면서 밀린 얘기 해요."
+    },
+    {
+     "word": "deal with",
+     "meaning": "처리하다, 다루다",
+     "example": "I have to deal with many emails.",
+     "example_ko": "처리할 메일이 많아요."
+    },
+    {
+     "word": "carry out",
+     "meaning": "수행하다",
+     "example": "We will carry out the test tomorrow.",
+     "example_ko": "내일 테스트를 수행할 거예요."
+    }
+   ]
+  },
+  {
+   "name": "협상과 설득",
+   "words": [
+    {
+     "word": "negotiate",
+     "meaning": "협상하다",
+     "example": "We need to negotiate the price.",
+     "example_ko": "가격을 협상해야 해요."
+    },
+    {
+     "word": "suggest",
+     "meaning": "제안하다",
+     "example": "I suggest a short break.",
+     "example_ko": "잠깐 쉬는 걸 제안해요."
+    },
+    {
+     "word": "convince",
+     "meaning": "설득하다",
+     "example": "It is hard to convince my boss.",
+     "example_ko": "상사를 설득하기가 어려워요."
+    },
+    {
+     "word": "compromise",
+     "meaning": "타협, 타협하다",
+     "example": "Both sides reached a compromise.",
+     "example_ko": "양측이 타협에 이르렀어요."
+    },
+    {
+     "word": "consider",
+     "meaning": "고려하다",
+     "example": "Please consider our offer again.",
+     "example_ko": "우리 제안을 다시 고려해 주세요."
+    },
+    {
+     "word": "offer",
+     "meaning": "제안, 제공하다",
+     "example": "They made a very good offer.",
+     "example_ko": "그들이 아주 좋은 제안을 했어요."
+    },
+    {
+     "word": "accept",
+     "meaning": "받아들이다",
+     "example": "We decided to accept the terms.",
+     "example_ko": "그 조건을 받아들이기로 했어요."
+    },
+    {
+     "word": "decline",
+     "meaning": "거절하다",
+     "example": "I had to decline the invitation.",
+     "example_ko": "초대를 거절해야 했어요."
+    },
+    {
+     "word": "benefit",
+     "meaning": "이익, 혜택",
+     "example": "This plan will benefit everyone.",
+     "example_ko": "이 계획은 모두에게 이익이 돼요."
+    },
+    {
+     "word": "alternative",
+     "meaning": "대안",
+     "example": "Do we have an alternative plan?",
+     "example_ko": "대안이 있나요?"
+    }
+   ]
+  },
+  {
+   "name": "데이터와 분석",
+   "words": [
+    {
+     "word": "analyze",
+     "meaning": "분석하다",
+     "example": "We analyze user data every week.",
+     "example_ko": "우리는 매주 사용자 데이터를 분석해요."
+    },
+    {
+     "word": "increase",
+     "meaning": "증가하다, 증가",
+     "example": "Sales increase in the summer.",
+     "example_ko": "여름에는 매출이 늘어요."
+    },
+    {
+     "word": "decrease",
+     "meaning": "감소하다, 감소",
+     "example": "Costs decrease when we plan ahead.",
+     "example_ko": "미리 계획하면 비용이 줄어요."
+    },
+    {
+     "word": "compare",
+     "meaning": "비교하다",
+     "example": "Let's compare the two options.",
+     "example_ko": "두 가지 안을 비교해 봐요."
+    },
+    {
+     "word": "average",
+     "meaning": "평균",
+     "example": "The average score was eighty.",
+     "example_ko": "평균 점수는 80점이었어요."
+    },
+    {
+     "word": "accurate",
+     "meaning": "정확한",
+     "example": "Is this number accurate?",
+     "example_ko": "이 숫자가 정확한가요?"
+    },
+    {
+     "word": "significant",
+     "meaning": "중요한, 상당한",
+     "example": "There was a significant change.",
+     "example_ko": "상당한 변화가 있었어요."
+    },
+    {
+     "word": "measure",
+     "meaning": "측정하다",
+     "example": "How do we measure success?",
+     "example_ko": "성공을 어떻게 측정하나요?"
+    },
+    {
+     "word": "report",
+     "meaning": "보고서, 보고하다",
+     "example": "I will send the report tonight.",
+     "example_ko": "오늘 밤 보고서를 보낼게요."
+    },
+    {
+     "word": "result",
+     "meaning": "결과",
+     "example": "The result was better than expected.",
+     "example_ko": "결과가 예상보다 좋았어요."
+    }
+   ]
+  },
+  {
+   "name": "커리어",
+   "words": [
+    {
+     "word": "achieve",
+     "meaning": "달성하다",
+     "example": "We can achieve this goal together.",
+     "example_ko": "우리는 함께 이 목표를 달성할 수 있어요."
+    },
+    {
+     "word": "experience",
+     "meaning": "경험",
+     "example": "I have experience in project planning.",
+     "example_ko": "저는 프로젝트 기획 경험이 있어요."
+    },
+    {
+     "word": "opportunity",
+     "meaning": "기회",
+     "example": "This is a great opportunity for me.",
+     "example_ko": "저에게 정말 좋은 기회예요."
+    },
+    {
+     "word": "challenge",
+     "meaning": "도전, 어려움",
+     "example": "Every new project is a challenge.",
+     "example_ko": "새 프로젝트는 언제나 도전이에요."
+    },
+    {
+     "word": "responsible",
+     "meaning": "책임이 있는",
+     "example": "I am responsible for the whole schedule.",
+     "example_ko": "전체 일정은 제가 책임져요."
+    },
+    {
+     "word": "promotion",
+     "meaning": "승진",
+     "example": "She got a promotion last month.",
+     "example_ko": "그녀는 지난달에 승진했어요."
+    },
+    {
+     "word": "skill",
+     "meaning": "기술, 역량",
+     "example": "Writing is an important skill.",
+     "example_ko": "글쓰기는 중요한 역량이에요."
+    },
+    {
+     "word": "goal",
+     "meaning": "목표",
+     "example": "My goal is to speak English well.",
+     "example_ko": "제 목표는 영어를 잘 말하는 거예요."
+    },
+    {
+     "word": "effort",
+     "meaning": "노력",
+     "example": "Thank you for your hard effort.",
+     "example_ko": "애써 주셔서 감사합니다."
+    },
+    {
+     "word": "colleague",
+     "meaning": "동료",
+     "example": "My colleague helped me a lot.",
+     "example_ko": "동료가 많이 도와줬어요."
+    }
+   ]
+  }
+ ]
+}

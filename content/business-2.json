@@ -1,0 +1,1175 @@
+{
+ "track": "business",
+ "themes": [
+  {
+   "name": "보고와 발표",
+   "words": [
+    {
+     "word": "present",
+     "meaning": "발표하다",
+     "example": "I will present the results today.",
+     "example_ko": "오늘 결과를 발표하겠습니다."
+    },
+    {
+     "word": "slide",
+     "meaning": "슬라이드",
+     "example": "Please go to the next slide.",
+     "example_ko": "다음 슬라이드로 넘어가 주세요."
+    },
+    {
+     "word": "overview",
+     "meaning": "개요",
+     "example": "Let me give you a quick overview.",
+     "example_ko": "간단히 개요를 설명드리겠습니다."
+    },
+    {
+     "word": "highlight",
+     "meaning": "강조하다",
+     "example": "I want to highlight three key points.",
+     "example_ko": "세 가지 핵심 사항을 강조하고 싶습니다."
+    },
+    {
+     "word": "conclusion",
+     "meaning": "결론",
+     "example": "The conclusion is clear and simple.",
+     "example_ko": "결론은 명확하고 간단합니다."
+    },
+    {
+     "word": "outline",
+     "meaning": "개요를 설명하다",
+     "example": "Let me outline our main goals.",
+     "example_ko": "우리의 주요 목표를 개략적으로 설명드리겠습니다."
+    },
+    {
+     "word": "insight",
+     "meaning": "통찰",
+     "example": "This data gives us useful insight.",
+     "example_ko": "이 데이터는 유용한 통찰을 줍니다."
+    },
+    {
+     "word": "recap",
+     "meaning": "요약 정리",
+     "example": "Here is a quick recap of today.",
+     "example_ko": "오늘 내용을 간단히 정리해 드릴게요."
+    },
+    {
+     "word": "elaborate",
+     "meaning": "자세히 설명하다",
+     "example": "Could you elaborate on that idea?",
+     "example_ko": "그 아이디어를 자세히 설명해 주시겠어요?"
+    },
+    {
+     "word": "takeaway",
+     "meaning": "핵심 시사점",
+     "example": "The main takeaway is cost savings.",
+     "example_ko": "핵심 시사점은 비용 절감입니다."
+    }
+   ]
+  },
+  {
+   "name": "일정 관리",
+   "words": [
+    {
+     "word": "reschedule",
+     "meaning": "일정을 변경하다",
+     "example": "Can we reschedule for next week?",
+     "example_ko": "다음 주로 일정을 변경할 수 있을까요?"
+    },
+    {
+     "word": "calendar",
+     "meaning": "달력, 일정표",
+     "example": "Please check my calendar first.",
+     "example_ko": "먼저 제 일정표를 확인해 주세요."
+    },
+    {
+     "word": "availability",
+     "meaning": "가능한 시간",
+     "example": "What is your availability on Monday?",
+     "example_ko": "월요일에 가능한 시간이 언제인가요?"
+    },
+    {
+     "word": "appointment",
+     "meaning": "약속, 예약",
+     "example": "I have an appointment at noon.",
+     "example_ko": "정오에 약속이 있어요."
+    },
+    {
+     "word": "cancel",
+     "meaning": "취소하다",
+     "example": "I need to cancel our call.",
+     "example_ko": "우리 통화를 취소해야 해요."
+    },
+    {
+     "word": "overlap",
+     "meaning": "겹치다",
+     "example": "These two meetings overlap each other.",
+     "example_ko": "이 두 회의는 서로 겹쳐요."
+    },
+    {
+     "word": "duration",
+     "meaning": "소요 시간",
+     "example": "The duration is about one hour.",
+     "example_ko": "소요 시간은 약 한 시간이에요."
+    },
+    {
+     "word": "slot",
+     "meaning": "시간대",
+     "example": "Is there a free slot today?",
+     "example_ko": "오늘 비어 있는 시간대가 있나요?"
+    },
+    {
+     "word": "conflict",
+     "meaning": "충돌, 겹침",
+     "example": "I have a conflict at three.",
+     "example_ko": "세 시에 일정이 겹쳐요."
+    },
+    {
+     "word": "shift",
+     "meaning": "옮기다",
+     "example": "Can we shift the meeting earlier?",
+     "example_ko": "회의를 더 일찍으로 옮길 수 있을까요?"
+    }
+   ]
+  },
+  {
+   "name": "프로젝트 관리",
+   "words": [
+    {
+     "word": "milestone",
+     "meaning": "이정표",
+     "example": "We reached an important milestone today.",
+     "example_ko": "오늘 중요한 이정표에 도달했어요."
+    },
+    {
+     "word": "stakeholder",
+     "meaning": "이해관계자",
+     "example": "Every stakeholder must see the plan.",
+     "example_ko": "모든 이해관계자가 계획을 봐야 합니다."
+    },
+    {
+     "word": "dependency",
+     "meaning": "의존성",
+     "example": "This task has a major dependency.",
+     "example_ko": "이 작업에는 중요한 의존성이 있어요."
+    },
+    {
+     "word": "risk",
+     "meaning": "위험",
+     "example": "The biggest risk is the tight timeline.",
+     "example_ko": "가장 큰 위험은 빠듯한 일정이에요."
+    },
+    {
+     "word": "resource",
+     "meaning": "자원, 인력",
+     "example": "Which resource can help with this task?",
+     "example_ko": "어떤 인력이 이 작업을 도울 수 있나요?"
+    },
+    {
+     "word": "delegate",
+     "meaning": "위임하다",
+     "example": "I will delegate this task to him.",
+     "example_ko": "이 업무는 그에게 위임할게요."
+    },
+    {
+     "word": "prioritize",
+     "meaning": "우선순위를 정하다",
+     "example": "We must prioritize the urgent tasks.",
+     "example_ko": "급한 업무의 우선순위를 정해야 해요."
+    },
+    {
+     "word": "bottleneck",
+     "meaning": "병목",
+     "example": "Testing is the main bottleneck.",
+     "example_ko": "테스트가 주요 병목이에요."
+    },
+    {
+     "word": "kickoff",
+     "meaning": "착수 회의",
+     "example": "The kickoff is on Monday morning.",
+     "example_ko": "착수 회의는 월요일 아침이에요."
+    },
+    {
+     "word": "deliverable",
+     "meaning": "산출물",
+     "example": "Each deliverable needs a clear owner.",
+     "example_ko": "각 산출물에는 명확한 담당자가 필요해요."
+    }
+   ]
+  },
+  {
+   "name": "전화와 화상회의",
+   "words": [
+    {
+     "word": "mute",
+     "meaning": "음소거하다",
+     "example": "Please mute your microphone now.",
+     "example_ko": "지금 마이크를 음소거해 주세요."
+    },
+    {
+     "word": "unmute",
+     "meaning": "음소거를 해제하다",
+     "example": "Could you unmute yourself, please?",
+     "example_ko": "음소거를 해제해 주시겠어요?"
+    },
+    {
+     "word": "share",
+     "meaning": "공유하다",
+     "example": "Can you share your screen?",
+     "example_ko": "화면을 공유해 주시겠어요?"
+    },
+    {
+     "word": "connection",
+     "meaning": "연결",
+     "example": "The connection is very unstable.",
+     "example_ko": "연결이 매우 불안정해요."
+    },
+    {
+     "word": "audio",
+     "meaning": "음성",
+     "example": "I can't hear the audio.",
+     "example_ko": "음성이 들리지 않아요."
+    },
+    {
+     "word": "break up",
+     "meaning": "(소리가) 끊기다",
+     "example": "You are starting to break up.",
+     "example_ko": "말씀이 끊기기 시작해요."
+    },
+    {
+     "word": "hold",
+     "meaning": "기다리게 하다",
+     "example": "Please hold for a moment.",
+     "example_ko": "잠시만 기다려 주세요."
+    },
+    {
+     "word": "dial in",
+     "meaning": "전화로 접속하다",
+     "example": "I will dial in from the car.",
+     "example_ko": "차에서 전화로 접속할게요."
+    },
+    {
+     "word": "hang up",
+     "meaning": "전화를 끊다",
+     "example": "Please don't hang up yet.",
+     "example_ko": "아직 전화를 끊지 마세요."
+    },
+    {
+     "word": "echo",
+     "meaning": "에코, 울림",
+     "example": "There is an echo on the line.",
+     "example_ko": "통화에 에코가 있어요."
+    }
+   ]
+  },
+  {
+   "name": "고객 응대",
+   "words": [
+    {
+     "word": "complaint",
+     "meaning": "불만",
+     "example": "We received a complaint yesterday.",
+     "example_ko": "어제 불만 접수를 받았어요."
+    },
+    {
+     "word": "refund",
+     "meaning": "환불",
+     "example": "The customer asked for a refund.",
+     "example_ko": "고객이 환불을 요청했어요."
+    },
+    {
+     "word": "inconvenience",
+     "meaning": "불편",
+     "example": "We apologize for the inconvenience.",
+     "example_ko": "불편을 드려 죄송합니다."
+    },
+    {
+     "word": "assist",
+     "meaning": "돕다",
+     "example": "How may I assist you today?",
+     "example_ko": "오늘 무엇을 도와드릴까요?"
+    },
+    {
+     "word": "escalate",
+     "meaning": "상부에 보고하다",
+     "example": "I will escalate this to my manager.",
+     "example_ko": "이 건은 제 매니저에게 상부 보고하겠습니다."
+    },
+    {
+     "word": "satisfaction",
+     "meaning": "만족",
+     "example": "Customer satisfaction is our top goal.",
+     "example_ko": "고객 만족이 우리의 최우선 목표입니다."
+    },
+    {
+     "word": "warranty",
+     "meaning": "품질 보증",
+     "example": "The warranty covers two years.",
+     "example_ko": "품질 보증은 2년간 적용됩니다."
+    },
+    {
+     "word": "compensate",
+     "meaning": "보상하다",
+     "example": "We will compensate you for the delay.",
+     "example_ko": "지연에 대해 보상해 드리겠습니다."
+    },
+    {
+     "word": "inquiry",
+     "meaning": "문의",
+     "example": "Thank you for your inquiry.",
+     "example_ko": "문의해 주셔서 감사합니다."
+    },
+    {
+     "word": "patient",
+     "meaning": "참을성 있는",
+     "example": "Please be patient with us.",
+     "example_ko": "저희를 조금만 참고 기다려 주세요."
+    }
+   ]
+  },
+  {
+   "name": "영업",
+   "words": [
+    {
+     "word": "prospect",
+     "meaning": "잠재 고객",
+     "example": "She is a promising prospect.",
+     "example_ko": "그녀는 유망한 잠재 고객이에요."
+    },
+    {
+     "word": "pitch",
+     "meaning": "제안 발표를 하다",
+     "example": "I will pitch our product tomorrow.",
+     "example_ko": "내일 우리 제품을 제안 발표할 거예요."
+    },
+    {
+     "word": "quote",
+     "meaning": "견적",
+     "example": "Could you send me a quote?",
+     "example_ko": "견적서를 보내 주시겠어요?"
+    },
+    {
+     "word": "lead",
+     "meaning": "영업 기회",
+     "example": "We got a new lead today.",
+     "example_ko": "오늘 새로운 영업 기회가 생겼어요."
+    },
+    {
+     "word": "upsell",
+     "meaning": "추가 판매하다",
+     "example": "We try to upsell premium plans.",
+     "example_ko": "우리는 프리미엄 요금제를 추가 판매하려고 해요."
+    },
+    {
+     "word": "commission",
+     "meaning": "수수료",
+     "example": "Sales reps earn a commission.",
+     "example_ko": "영업 사원은 수수료를 받아요."
+    },
+    {
+     "word": "renew",
+     "meaning": "갱신하다",
+     "example": "The customer wants to renew annually.",
+     "example_ko": "고객이 매년 갱신하기를 원해요."
+    },
+    {
+     "word": "discount",
+     "meaning": "할인",
+     "example": "We can offer a ten percent discount.",
+     "example_ko": "10퍼센트 할인을 드릴 수 있어요."
+    },
+    {
+     "word": "close",
+     "meaning": "성사시키다",
+     "example": "We hope to close the deal soon.",
+     "example_ko": "곧 거래를 성사시키기를 바라요."
+    },
+    {
+     "word": "pipeline",
+     "meaning": "파이프라인",
+     "example": "Our sales pipeline looks strong.",
+     "example_ko": "우리 영업 파이프라인이 탄탄해 보여요."
+    }
+   ]
+  },
+  {
+   "name": "계약",
+   "words": [
+    {
+     "word": "contract",
+     "meaning": "계약서",
+     "example": "Please sign the contract today.",
+     "example_ko": "오늘 계약서에 서명해 주세요."
+    },
+    {
+     "word": "clause",
+     "meaning": "조항",
+     "example": "This clause needs to change.",
+     "example_ko": "이 조항은 바뀌어야 해요."
+    },
+    {
+     "word": "terms",
+     "meaning": "조건",
+     "example": "We agree to the terms.",
+     "example_ko": "우리는 그 조건에 동의합니다."
+    },
+    {
+     "word": "sign",
+     "meaning": "서명하다",
+     "example": "Where should I sign?",
+     "example_ko": "어디에 서명해야 하나요?"
+    },
+    {
+     "word": "renewal",
+     "meaning": "갱신",
+     "example": "The renewal date is in June.",
+     "example_ko": "갱신일은 6월이에요."
+    },
+    {
+     "word": "terminate",
+     "meaning": "해지하다",
+     "example": "Either party may terminate this agreement.",
+     "example_ko": "어느 쪽이든 이 계약을 해지할 수 있습니다."
+    },
+    {
+     "word": "amend",
+     "meaning": "수정하다",
+     "example": "We need to amend the contract.",
+     "example_ko": "계약서를 수정해야 해요."
+    },
+    {
+     "word": "liability",
+     "meaning": "책임",
+     "example": "The vendor has limited liability.",
+     "example_ko": "공급업체는 제한된 책임을 져요."
+    },
+    {
+     "word": "party",
+     "meaning": "당사자",
+     "example": "Each party must follow the rules.",
+     "example_ko": "각 당사자는 규칙을 따라야 해요."
+    },
+    {
+     "word": "obligation",
+     "meaning": "의무",
+     "example": "It is our legal obligation.",
+     "example_ko": "그것은 우리의 법적 의무예요."
+    }
+   ]
+  },
+  {
+   "name": "재무",
+   "words": [
+    {
+     "word": "invoice",
+     "meaning": "청구서",
+     "example": "Please send the invoice by Friday.",
+     "example_ko": "금요일까지 청구서를 보내 주세요."
+    },
+    {
+     "word": "expense",
+     "meaning": "비용",
+     "example": "This expense was not planned.",
+     "example_ko": "이 비용은 계획에 없었어요."
+    },
+    {
+     "word": "profit",
+     "meaning": "이익",
+     "example": "Our profit grew this year.",
+     "example_ko": "올해 우리 이익이 늘었어요."
+    },
+    {
+     "word": "cash flow",
+     "meaning": "현금 흐름",
+     "example": "Cash flow is tight this quarter.",
+     "example_ko": "이번 분기 현금 흐름이 빠듯해요."
+    },
+    {
+     "word": "forecast",
+     "meaning": "예측",
+     "example": "The forecast looks very positive.",
+     "example_ko": "예측이 매우 긍정적이에요."
+    },
+    {
+     "word": "reimburse",
+     "meaning": "환급하다",
+     "example": "The company will reimburse your travel costs.",
+     "example_ko": "회사가 출장비를 환급해 드릴 거예요."
+    },
+    {
+     "word": "payment",
+     "meaning": "지급, 결제",
+     "example": "The payment arrived this morning.",
+     "example_ko": "오늘 아침 결제가 도착했어요."
+    },
+    {
+     "word": "audit",
+     "meaning": "감사",
+     "example": "We have an audit next month.",
+     "example_ko": "다음 달에 감사가 있어요."
+    },
+    {
+     "word": "overdue",
+     "meaning": "연체된",
+     "example": "This invoice is already overdue.",
+     "example_ko": "이 청구서는 이미 연체됐어요."
+    },
+    {
+     "word": "quarter",
+     "meaning": "분기",
+     "example": "Sales rose in the last quarter.",
+     "example_ko": "지난 분기에 매출이 올랐어요."
+    }
+   ]
+  },
+  {
+   "name": "전략",
+   "words": [
+    {
+     "word": "strategy",
+     "meaning": "전략",
+     "example": "We need a new strategy.",
+     "example_ko": "우리에겐 새로운 전략이 필요해요."
+    },
+    {
+     "word": "competitor",
+     "meaning": "경쟁사",
+     "example": "Our main competitor lowered its prices.",
+     "example_ko": "주요 경쟁사가 가격을 내렸어요."
+    },
+    {
+     "word": "market share",
+     "meaning": "시장 점유율",
+     "example": "We want to grow our market share.",
+     "example_ko": "우리는 시장 점유율을 키우고 싶어요."
+    },
+    {
+     "word": "advantage",
+     "meaning": "이점, 강점",
+     "example": "Speed is our biggest advantage.",
+     "example_ko": "속도가 우리의 가장 큰 강점이에요."
+    },
+    {
+     "word": "vision",
+     "meaning": "비전",
+     "example": "The vision is clear to everyone.",
+     "example_ko": "비전은 모두에게 분명해요."
+    },
+    {
+     "word": "expand",
+     "meaning": "확장하다",
+     "example": "We plan to expand into Asia.",
+     "example_ko": "우리는 아시아로 확장할 계획이에요."
+    },
+    {
+     "word": "differentiate",
+     "meaning": "차별화하다",
+     "example": "How do we differentiate our product?",
+     "example_ko": "우리 제품을 어떻게 차별화하죠?"
+    },
+    {
+     "word": "innovation",
+     "meaning": "혁신",
+     "example": "Innovation drives our long-term growth.",
+     "example_ko": "혁신이 우리의 장기 성장을 이끌어요."
+    },
+    {
+     "word": "sustainable",
+     "meaning": "지속 가능한",
+     "example": "We need sustainable growth.",
+     "example_ko": "우리에겐 지속 가능한 성장이 필요해요."
+    },
+    {
+     "word": "roadmap",
+     "meaning": "로드맵",
+     "example": "Please share the product roadmap.",
+     "example_ko": "제품 로드맵을 공유해 주세요."
+    }
+   ]
+  },
+  {
+   "name": "채용과 면접",
+   "words": [
+    {
+     "word": "candidate",
+     "meaning": "후보자",
+     "example": "The candidate has strong experience.",
+     "example_ko": "그 후보자는 경력이 탄탄해요."
+    },
+    {
+     "word": "resume",
+     "meaning": "이력서",
+     "example": "Please send me your resume.",
+     "example_ko": "이력서를 보내 주세요."
+    },
+    {
+     "word": "interview",
+     "meaning": "면접",
+     "example": "The interview starts at ten.",
+     "example_ko": "면접은 10시에 시작해요."
+    },
+    {
+     "word": "recruit",
+     "meaning": "채용하다",
+     "example": "We plan to recruit five engineers.",
+     "example_ko": "엔지니어 다섯 명을 채용할 계획이에요."
+    },
+    {
+     "word": "vacancy",
+     "meaning": "공석",
+     "example": "There is a vacancy on our team.",
+     "example_ko": "우리 팀에 공석이 있어요."
+    },
+    {
+     "word": "qualification",
+     "meaning": "자격",
+     "example": "This role requires a specific qualification.",
+     "example_ko": "이 직무에는 특정 자격이 필요해요."
+    },
+    {
+     "word": "reference",
+     "meaning": "추천인",
+     "example": "Can you provide a reference?",
+     "example_ko": "추천인을 알려 주실 수 있나요?"
+    },
+    {
+     "word": "hire",
+     "meaning": "고용하다",
+     "example": "We want to hire her.",
+     "example_ko": "우리는 그녀를 채용하고 싶어요."
+    },
+    {
+     "word": "applicant",
+     "meaning": "지원자",
+     "example": "Every applicant must submit a portfolio.",
+     "example_ko": "모든 지원자는 포트폴리오를 제출해야 해요."
+    },
+    {
+     "word": "strength",
+     "meaning": "강점",
+     "example": "What is your greatest strength?",
+     "example_ko": "당신의 가장 큰 강점은 무엇인가요?"
+    }
+   ]
+  },
+  {
+   "name": "인사와 평가",
+   "words": [
+    {
+     "word": "performance",
+     "meaning": "성과",
+     "example": "Her performance was excellent this year.",
+     "example_ko": "올해 그녀의 성과는 훌륭했어요."
+    },
+    {
+     "word": "appraisal",
+     "meaning": "평가",
+     "example": "The annual appraisal is next week.",
+     "example_ko": "연간 평가는 다음 주예요."
+    },
+    {
+     "word": "raise",
+     "meaning": "임금 인상",
+     "example": "He asked for a raise.",
+     "example_ko": "그는 임금 인상을 요청했어요."
+    },
+    {
+     "word": "bonus",
+     "meaning": "상여금",
+     "example": "Everyone received a year-end bonus.",
+     "example_ko": "모두가 연말 상여금을 받았어요."
+    },
+    {
+     "word": "resign",
+     "meaning": "사직하다",
+     "example": "She decided to resign last month.",
+     "example_ko": "그녀는 지난달 사직하기로 했어요."
+    },
+    {
+     "word": "salary",
+     "meaning": "급여",
+     "example": "The salary is paid monthly.",
+     "example_ko": "급여는 매월 지급돼요."
+    },
+    {
+     "word": "leave",
+     "meaning": "휴가",
+     "example": "She is on leave this week.",
+     "example_ko": "그녀는 이번 주 휴가예요."
+    },
+    {
+     "word": "overtime",
+     "meaning": "초과 근무",
+     "example": "I worked overtime again yesterday.",
+     "example_ko": "어제도 초과 근무를 했어요."
+    },
+    {
+     "word": "supervisor",
+     "meaning": "상사",
+     "example": "My supervisor approved my request.",
+     "example_ko": "제 상사가 요청을 승인했어요."
+    },
+    {
+     "word": "potential",
+     "meaning": "잠재력",
+     "example": "He has great potential.",
+     "example_ko": "그는 잠재력이 커요."
+    }
+   ]
+  },
+  {
+   "name": "교육과 온보딩",
+   "words": [
+    {
+     "word": "orientation",
+     "meaning": "오리엔테이션",
+     "example": "Orientation starts at nine tomorrow.",
+     "example_ko": "오리엔테이션은 내일 9시에 시작해요."
+    },
+    {
+     "word": "mentor",
+     "meaning": "멘토",
+     "example": "My mentor gave me good advice.",
+     "example_ko": "제 멘토가 좋은 조언을 해 줬어요."
+    },
+    {
+     "word": "training",
+     "meaning": "교육",
+     "example": "The training lasts two days.",
+     "example_ko": "교육은 이틀간 진행돼요."
+    },
+    {
+     "word": "tutorial",
+     "meaning": "튜토리얼",
+     "example": "Please watch this short tutorial.",
+     "example_ko": "이 짧은 튜토리얼을 봐 주세요."
+    },
+    {
+     "word": "guideline",
+     "meaning": "지침",
+     "example": "Follow the guideline carefully.",
+     "example_ko": "지침을 꼼꼼히 따르세요."
+    },
+    {
+     "word": "onboarding",
+     "meaning": "온보딩",
+     "example": "Onboarding takes about two weeks.",
+     "example_ko": "온보딩은 약 2주 걸려요."
+    },
+    {
+     "word": "certificate",
+     "meaning": "수료증",
+     "example": "You will receive a certificate.",
+     "example_ko": "수료증을 받게 될 거예요."
+    },
+    {
+     "word": "workshop",
+     "meaning": "워크숍",
+     "example": "We run a workshop every month.",
+     "example_ko": "우리는 매달 워크숍을 열어요."
+    },
+    {
+     "word": "familiar",
+     "meaning": "익숙한",
+     "example": "I am not familiar with this tool.",
+     "example_ko": "저는 이 도구가 익숙하지 않아요."
+    },
+    {
+     "word": "handbook",
+     "meaning": "안내서",
+     "example": "The handbook explains all our rules.",
+     "example_ko": "안내서에 모든 규칙이 설명돼 있어요."
+    }
+   ]
+  },
+  {
+   "name": "UX 디자인",
+   "words": [
+    {
+     "word": "layout",
+     "meaning": "레이아웃",
+     "example": "The layout is clean and simple.",
+     "example_ko": "레이아웃이 깔끔하고 단순해요."
+    },
+    {
+     "word": "wireframe",
+     "meaning": "와이어프레임",
+     "example": "I will share the wireframe today.",
+     "example_ko": "오늘 와이어프레임을 공유할게요."
+    },
+    {
+     "word": "usability",
+     "meaning": "사용성",
+     "example": "We tested the usability with users.",
+     "example_ko": "사용자와 함께 사용성을 테스트했어요."
+    },
+    {
+     "word": "navigation",
+     "meaning": "탐색",
+     "example": "The navigation menu is confusing.",
+     "example_ko": "탐색 메뉴가 헷갈려요."
+    },
+    {
+     "word": "interface",
+     "meaning": "인터페이스",
+     "example": "The interface should be intuitive.",
+     "example_ko": "인터페이스는 직관적이어야 해요."
+    },
+    {
+     "word": "persona",
+     "meaning": "페르소나",
+     "example": "Each persona has different needs.",
+     "example_ko": "각 페르소나는 필요가 달라요."
+    },
+    {
+     "word": "responsive",
+     "meaning": "반응형의",
+     "example": "The site must be responsive.",
+     "example_ko": "사이트는 반응형이어야 해요."
+    },
+    {
+     "word": "accessibility",
+     "meaning": "접근성",
+     "example": "Accessibility matters for every user.",
+     "example_ko": "접근성은 모든 사용자에게 중요해요."
+    },
+    {
+     "word": "intuitive",
+     "meaning": "직관적인",
+     "example": "The app feels very intuitive.",
+     "example_ko": "앱이 매우 직관적으로 느껴져요."
+    },
+    {
+     "word": "flow",
+     "meaning": "흐름",
+     "example": "The checkout flow is too long.",
+     "example_ko": "결제 흐름이 너무 길어요."
+    }
+   ]
+  },
+  {
+   "name": "테스트와 품질",
+   "words": [
+    {
+     "word": "defect",
+     "meaning": "결함",
+     "example": "We found a serious defect.",
+     "example_ko": "심각한 결함을 발견했어요."
+    },
+    {
+     "word": "regression",
+     "meaning": "회귀",
+     "example": "Run the regression tests before release.",
+     "example_ko": "출시 전에 회귀 테스트를 실행하세요."
+    },
+    {
+     "word": "coverage",
+     "meaning": "커버리지",
+     "example": "Our test coverage is quite low.",
+     "example_ko": "우리 테스트 커버리지는 꽤 낮아요."
+    },
+    {
+     "word": "reproduce",
+     "meaning": "재현하다",
+     "example": "I can't reproduce this error.",
+     "example_ko": "이 오류를 재현할 수 없어요."
+    },
+    {
+     "word": "validate",
+     "meaning": "검증하다",
+     "example": "We must validate the input data.",
+     "example_ko": "입력 데이터를 검증해야 해요."
+    },
+    {
+     "word": "automate",
+     "meaning": "자동화하다",
+     "example": "We plan to automate these checks.",
+     "example_ko": "이 점검들을 자동화할 계획이에요."
+    },
+    {
+     "word": "standard",
+     "meaning": "기준",
+     "example": "This meets our quality standard.",
+     "example_ko": "이것은 우리 품질 기준을 충족해요."
+    },
+    {
+     "word": "verify",
+     "meaning": "확인하다",
+     "example": "Please verify the fix again.",
+     "example_ko": "수정 사항을 다시 확인해 주세요."
+    },
+    {
+     "word": "edge case",
+     "meaning": "예외 상황",
+     "example": "Did you test every edge case?",
+     "example_ko": "모든 예외 상황을 테스트했나요?"
+    },
+    {
+     "word": "pass",
+     "meaning": "통과하다",
+     "example": "All the checks should pass.",
+     "example_ko": "모든 점검이 통과해야 해요."
+    }
+   ]
+  },
+  {
+   "name": "운영과 장애",
+   "words": [
+    {
+     "word": "outage",
+     "meaning": "장애, 중단",
+     "example": "The outage lasted two hours.",
+     "example_ko": "장애가 두 시간 동안 이어졌어요."
+    },
+    {
+     "word": "incident",
+     "meaning": "사고",
+     "example": "We logged the incident this morning.",
+     "example_ko": "오늘 아침 그 사고를 기록했어요."
+    },
+    {
+     "word": "rollback",
+     "meaning": "롤백",
+     "example": "The rollback fixed the problem.",
+     "example_ko": "롤백으로 문제가 해결됐어요."
+    },
+    {
+     "word": "monitor",
+     "meaning": "모니터링하다",
+     "example": "We monitor the servers all day.",
+     "example_ko": "우리는 서버를 하루 종일 모니터링해요."
+    },
+    {
+     "word": "alert",
+     "meaning": "경보",
+     "example": "An alert came in last night.",
+     "example_ko": "어젯밤 경보가 들어왔어요."
+    },
+    {
+     "word": "downtime",
+     "meaning": "가동 중단 시간",
+     "example": "Planned downtime starts at midnight.",
+     "example_ko": "예정된 가동 중단은 자정에 시작해요."
+    },
+    {
+     "word": "root cause",
+     "meaning": "근본 원인",
+     "example": "We found the root cause.",
+     "example_ko": "근본 원인을 찾았어요."
+    },
+    {
+     "word": "backup",
+     "meaning": "백업",
+     "example": "Please make a backup first.",
+     "example_ko": "먼저 백업을 만들어 주세요."
+    },
+    {
+     "word": "capacity",
+     "meaning": "용량",
+     "example": "We are near full capacity.",
+     "example_ko": "우리는 용량이 거의 가득 찼어요."
+    },
+    {
+     "word": "restore",
+     "meaning": "복구하다",
+     "example": "We need to restore the service quickly.",
+     "example_ko": "서비스를 빠르게 복구해야 해요."
+    }
+   ]
+  },
+  {
+   "name": "보안",
+   "words": [
+    {
+     "word": "password",
+     "meaning": "비밀번호",
+     "example": "Please change your password today.",
+     "example_ko": "오늘 비밀번호를 변경해 주세요."
+    },
+    {
+     "word": "encrypt",
+     "meaning": "암호화하다",
+     "example": "We encrypt all customer data.",
+     "example_ko": "우리는 모든 고객 데이터를 암호화해요."
+    },
+    {
+     "word": "breach",
+     "meaning": "침해",
+     "example": "There was a data breach.",
+     "example_ko": "데이터 침해가 있었어요."
+    },
+    {
+     "word": "authentication",
+     "meaning": "인증",
+     "example": "Two-step authentication is required.",
+     "example_ko": "2단계 인증이 필요해요."
+    },
+    {
+     "word": "permission",
+     "meaning": "권한",
+     "example": "You need permission to open this.",
+     "example_ko": "이것을 열려면 권한이 필요해요."
+    },
+    {
+     "word": "vulnerability",
+     "meaning": "취약점",
+     "example": "We found a serious vulnerability.",
+     "example_ko": "심각한 취약점을 발견했어요."
+    },
+    {
+     "word": "firewall",
+     "meaning": "방화벽",
+     "example": "The firewall blocked that request.",
+     "example_ko": "방화벽이 그 요청을 차단했어요."
+    },
+    {
+     "word": "phishing",
+     "meaning": "피싱",
+     "example": "Be careful of phishing emails.",
+     "example_ko": "피싱 이메일을 조심하세요."
+    },
+    {
+     "word": "access",
+     "meaning": "접근하다",
+     "example": "Only admins can access this page.",
+     "example_ko": "관리자만 이 페이지에 접근할 수 있어요."
+    },
+    {
+     "word": "threat",
+     "meaning": "위협",
+     "example": "This is a real threat.",
+     "example_ko": "이것은 실제 위협이에요."
+    }
+   ]
+  },
+  {
+   "name": "법무와 규정",
+   "words": [
+    {
+     "word": "regulation",
+     "meaning": "규정",
+     "example": "This regulation takes effect next year.",
+     "example_ko": "이 규정은 내년에 시행돼요."
+    },
+    {
+     "word": "comply",
+     "meaning": "준수하다",
+     "example": "We must comply with local laws.",
+     "example_ko": "우리는 현지 법을 준수해야 해요."
+    },
+    {
+     "word": "compliance",
+     "meaning": "컴플라이언스, 법규 준수",
+     "example": "Compliance checks happen every year.",
+     "example_ko": "법규 준수 점검은 매년 이뤄져요."
+    },
+    {
+     "word": "confidential",
+     "meaning": "기밀의",
+     "example": "This file is strictly confidential.",
+     "example_ko": "이 파일은 엄격히 기밀이에요."
+    },
+    {
+     "word": "copyright",
+     "meaning": "저작권",
+     "example": "The image is under copyright.",
+     "example_ko": "그 이미지는 저작권 보호를 받아요."
+    },
+    {
+     "word": "lawsuit",
+     "meaning": "소송",
+     "example": "They filed a lawsuit last week.",
+     "example_ko": "그들은 지난주 소송을 제기했어요."
+    },
+    {
+     "word": "violate",
+     "meaning": "위반하다",
+     "example": "That action may violate the law.",
+     "example_ko": "그 행동은 법을 위반할 수 있어요."
+    },
+    {
+     "word": "privacy",
+     "meaning": "개인정보 보호",
+     "example": "We take privacy very seriously.",
+     "example_ko": "우리는 개인정보 보호를 매우 중요하게 여겨요."
+    },
+    {
+     "word": "consent",
+     "meaning": "동의",
+     "example": "We need your written consent.",
+     "example_ko": "서면 동의가 필요합니다."
+    },
+    {
+     "word": "penalty",
+     "meaning": "벌금, 처벌",
+     "example": "The penalty is quite heavy.",
+     "example_ko": "처벌이 꽤 무거워요."
+    }
+   ]
+  },
+  {
+   "name": "출장",
+   "words": [
+    {
+     "word": "itinerary",
+     "meaning": "여행 일정표",
+     "example": "Please send me the itinerary.",
+     "example_ko": "여행 일정표를 보내 주세요."
+    },
+    {
+     "word": "business trip",
+     "meaning": "출장",
+     "example": "I am on a business trip.",
+     "example_ko": "저는 출장 중이에요."
+    },
+    {
+     "word": "boarding pass",
+     "meaning": "탑승권",
+     "example": "Do you have your boarding pass?",
+     "example_ko": "탑승권 가지고 계세요?"
+    },
+    {
+     "word": "accommodation",
+     "meaning": "숙소",
+     "example": "The company booked my accommodation.",
+     "example_ko": "회사가 제 숙소를 예약했어요."
+    },
+    {
+     "word": "customs",
+     "meaning": "세관",
+     "example": "We passed customs quickly.",
+     "example_ko": "우리는 세관을 빠르게 통과했어요."
+    },
+    {
+     "word": "layover",
+     "meaning": "경유",
+     "example": "I have a two-hour layover.",
+     "example_ko": "두 시간 경유가 있어요."
+    },
+    {
+     "word": "visa",
+     "meaning": "비자",
+     "example": "I need a visa for this trip.",
+     "example_ko": "이번 출장에 비자가 필요해요."
+    },
+    {
+     "word": "round trip",
+     "meaning": "왕복",
+     "example": "I booked a round trip ticket.",
+     "example_ko": "왕복 티켓을 예약했어요."
+    },
+    {
+     "word": "jet lag",
+     "meaning": "시차 피로",
+     "example": "I still have jet lag.",
+     "example_ko": "아직도 시차 피로가 있어요."
+    },
+    {
+     "word": "conference",
+     "meaning": "컨퍼런스",
+     "example": "I am attending a conference there.",
+     "example_ko": "저는 거기서 컨퍼런스에 참석해요."
+    }
+   ]
+  }
+ ]
+}

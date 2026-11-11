@@ -1,0 +1,1193 @@
+{
+ "track": "general",
+ "themes": [
+  {
+   "name": "인사와 소개",
+   "level": "beginner",
+   "words": [
+    {
+     "word": "hello",
+     "meaning": "안녕하세요",
+     "example": "Hello, how are you today?",
+     "example_ko": "안녕하세요, 오늘 어떠세요?"
+    },
+    {
+     "word": "goodbye",
+     "meaning": "안녕히 가세요",
+     "example": "Goodbye, see you next week!",
+     "example_ko": "안녕히 가세요, 다음 주에 봬요!"
+    },
+    {
+     "word": "meet",
+     "meaning": "만나다",
+     "example": "Nice to meet you, Sam.",
+     "example_ko": "만나서 반가워요, 샘."
+    },
+    {
+     "word": "name",
+     "meaning": "이름",
+     "example": "My name is Mina.",
+     "example_ko": "제 이름은 미나예요."
+    },
+    {
+     "word": "friend",
+     "meaning": "친구",
+     "example": "She is my best friend.",
+     "example_ko": "그녀는 제 가장 친한 친구예요."
+    },
+    {
+     "word": "welcome",
+     "meaning": "환영하다",
+     "example": "Welcome to our new home!",
+     "example_ko": "우리 새 집에 오신 것을 환영해요!"
+    },
+    {
+     "word": "please",
+     "meaning": "제발, 부디",
+     "example": "Please sit down here.",
+     "example_ko": "여기 앉으세요."
+    },
+    {
+     "word": "thank",
+     "meaning": "감사하다",
+     "example": "I want to thank you again.",
+     "example_ko": "다시 한번 감사드리고 싶어요."
+    },
+    {
+     "word": "sorry",
+     "meaning": "미안한",
+     "example": "I am sorry I am late.",
+     "example_ko": "늦어서 미안해요."
+    },
+    {
+     "word": "introduce",
+     "meaning": "소개하다",
+     "example": "Let me introduce my teacher.",
+     "example_ko": "제 선생님을 소개할게요."
+    }
+   ]
+  },
+  {
+   "name": "가족과 사람",
+   "level": "beginner",
+   "words": [
+    {
+     "word": "mother",
+     "meaning": "어머니",
+     "example": "My mother cooks every evening.",
+     "example_ko": "어머니는 매일 저녁 요리를 하세요."
+    },
+    {
+     "word": "father",
+     "meaning": "아버지",
+     "example": "My father drives to work.",
+     "example_ko": "아버지는 차로 출근하세요."
+    },
+    {
+     "word": "brother",
+     "meaning": "형, 오빠, 남동생",
+     "example": "My brother plays soccer well.",
+     "example_ko": "제 형은 축구를 잘해요."
+    },
+    {
+     "word": "sister",
+     "meaning": "언니, 누나, 여동생",
+     "example": "My sister lives in Busan.",
+     "example_ko": "제 여동생은 부산에 살아요."
+    },
+    {
+     "word": "baby",
+     "meaning": "아기",
+     "example": "The baby is sleeping now.",
+     "example_ko": "아기가 지금 자고 있어요."
+    },
+    {
+     "word": "child",
+     "meaning": "아이",
+     "example": "Each child gets a gift.",
+     "example_ko": "아이마다 선물을 받아요."
+    },
+    {
+     "word": "husband",
+     "meaning": "남편",
+     "example": "Her husband works at a bank.",
+     "example_ko": "그녀의 남편은 은행에서 일해요."
+    },
+    {
+     "word": "wife",
+     "meaning": "아내",
+     "example": "His wife teaches English.",
+     "example_ko": "그의 아내는 영어를 가르쳐요."
+    },
+    {
+     "word": "neighbor",
+     "meaning": "이웃",
+     "example": "Our neighbor is very kind.",
+     "example_ko": "우리 이웃은 아주 친절해요."
+    },
+    {
+     "word": "grandmother",
+     "meaning": "할머니",
+     "example": "My grandmother tells funny stories.",
+     "example_ko": "제 할머니는 재미있는 이야기를 해 주세요."
+    }
+   ]
+  },
+  {
+   "name": "음식과 식당",
+   "level": "beginner",
+   "words": [
+    {
+     "word": "breakfast",
+     "meaning": "아침 식사",
+     "example": "I eat breakfast at seven.",
+     "example_ko": "저는 7시에 아침을 먹어요."
+    },
+    {
+     "word": "menu",
+     "meaning": "메뉴",
+     "example": "Can I see the menu?",
+     "example_ko": "메뉴 좀 볼 수 있을까요?"
+    },
+    {
+     "word": "order",
+     "meaning": "주문하다",
+     "example": "I would like to order now.",
+     "example_ko": "지금 주문하고 싶어요."
+    },
+    {
+     "word": "rice",
+     "meaning": "밥, 쌀",
+     "example": "We eat rice every day.",
+     "example_ko": "우리는 매일 밥을 먹어요."
+    },
+    {
+     "word": "chicken",
+     "meaning": "닭고기",
+     "example": "I like fried chicken.",
+     "example_ko": "저는 프라이드치킨을 좋아해요."
+    },
+    {
+     "word": "water",
+     "meaning": "물",
+     "example": "Can I have some water?",
+     "example_ko": "물 좀 주실래요?"
+    },
+    {
+     "word": "delicious",
+     "meaning": "맛있는",
+     "example": "This soup is really delicious.",
+     "example_ko": "이 수프는 정말 맛있어요."
+    },
+    {
+     "word": "hungry",
+     "meaning": "배고픈",
+     "example": "I am very hungry now.",
+     "example_ko": "저는 지금 아주 배고파요."
+    },
+    {
+     "word": "bill",
+     "meaning": "계산서",
+     "example": "Can we have the bill, please?",
+     "example_ko": "계산서 좀 주시겠어요?"
+    },
+    {
+     "word": "dessert",
+     "meaning": "디저트",
+     "example": "We shared a sweet dessert.",
+     "example_ko": "우리는 달콤한 디저트를 나눠 먹었어요."
+    }
+   ]
+  },
+  {
+   "name": "집과 생활",
+   "level": "beginner",
+   "words": [
+    {
+     "word": "kitchen",
+     "meaning": "부엌",
+     "example": "She is cooking in the kitchen.",
+     "example_ko": "그녀는 부엌에서 요리하고 있어요."
+    },
+    {
+     "word": "bedroom",
+     "meaning": "침실",
+     "example": "My bedroom is quite small.",
+     "example_ko": "제 침실은 꽤 작아요."
+    },
+    {
+     "word": "door",
+     "meaning": "문",
+     "example": "Please close the door.",
+     "example_ko": "문 좀 닫아 주세요."
+    },
+    {
+     "word": "window",
+     "meaning": "창문",
+     "example": "He opened the window slowly.",
+     "example_ko": "그는 천천히 창문을 열었어요."
+    },
+    {
+     "word": "clean",
+     "meaning": "청소하다",
+     "example": "I clean my room on Sundays.",
+     "example_ko": "저는 일요일마다 방을 청소해요."
+    },
+    {
+     "word": "wash",
+     "meaning": "씻다",
+     "example": "Always wash your hands first.",
+     "example_ko": "항상 먼저 손을 씻으세요."
+    },
+    {
+     "word": "bed",
+     "meaning": "침대",
+     "example": "The cat is on the bed.",
+     "example_ko": "고양이가 침대 위에 있어요."
+    },
+    {
+     "word": "chair",
+     "meaning": "의자",
+     "example": "This chair is very comfortable.",
+     "example_ko": "이 의자는 아주 편해요."
+    },
+    {
+     "word": "lamp",
+     "meaning": "램프, 전등",
+     "example": "Turn off the lamp, please.",
+     "example_ko": "전등 좀 꺼 주세요."
+    },
+    {
+     "word": "sleep",
+     "meaning": "자다",
+     "example": "I sleep eight hours daily.",
+     "example_ko": "저는 매일 8시간 자요."
+    }
+   ]
+  },
+  {
+   "name": "시간과 날씨",
+   "level": "beginner",
+   "words": [
+    {
+     "word": "today",
+     "meaning": "오늘",
+     "example": "What are you doing today?",
+     "example_ko": "오늘 뭐 하세요?"
+    },
+    {
+     "word": "tomorrow",
+     "meaning": "내일",
+     "example": "I will see you tomorrow.",
+     "example_ko": "내일 봐요."
+    },
+    {
+     "word": "morning",
+     "meaning": "아침",
+     "example": "I run every morning.",
+     "example_ko": "저는 매일 아침 달려요."
+    },
+    {
+     "word": "night",
+     "meaning": "밤",
+     "example": "The stars are bright tonight.",
+     "example_ko": "오늘 밤 별이 밝아요."
+    },
+    {
+     "word": "sunny",
+     "meaning": "화창한",
+     "example": "It is sunny and warm today.",
+     "example_ko": "오늘은 화창하고 따뜻해요."
+    },
+    {
+     "word": "rain",
+     "meaning": "비",
+     "example": "I hope the rain stops soon.",
+     "example_ko": "비가 곧 그치면 좋겠어요."
+    },
+    {
+     "word": "cold",
+     "meaning": "추운",
+     "example": "It is very cold outside.",
+     "example_ko": "밖이 아주 추워요."
+    },
+    {
+     "word": "hot",
+     "meaning": "더운",
+     "example": "Summer is hot in Korea.",
+     "example_ko": "한국의 여름은 더워요."
+    },
+    {
+     "word": "snow",
+     "meaning": "눈",
+     "example": "We play in the snow.",
+     "example_ko": "우리는 눈 속에서 놀아요."
+    },
+    {
+     "word": "week",
+     "meaning": "주",
+     "example": "I have a busy week.",
+     "example_ko": "이번 주는 바빠요."
+    }
+   ]
+  },
+  {
+   "name": "쇼핑",
+   "level": "beginner",
+   "words": [
+    {
+     "word": "buy",
+     "meaning": "사다",
+     "example": "I want to buy shoes.",
+     "example_ko": "저는 신발을 사고 싶어요."
+    },
+    {
+     "word": "sell",
+     "meaning": "팔다",
+     "example": "They sell fresh fruit here.",
+     "example_ko": "여기서는 신선한 과일을 팔아요."
+    },
+    {
+     "word": "price",
+     "meaning": "가격",
+     "example": "What is the price of this?",
+     "example_ko": "이거 가격이 얼마예요?"
+    },
+    {
+     "word": "cheap",
+     "meaning": "저렴한",
+     "example": "This shirt is very cheap.",
+     "example_ko": "이 셔츠는 아주 저렴해요."
+    },
+    {
+     "word": "expensive",
+     "meaning": "비싼",
+     "example": "That bag is too expensive.",
+     "example_ko": "저 가방은 너무 비싸요."
+    },
+    {
+     "word": "money",
+     "meaning": "돈",
+     "example": "I do not have money.",
+     "example_ko": "저는 돈이 없어요."
+    },
+    {
+     "word": "pay",
+     "meaning": "지불하다",
+     "example": "Can I pay by card?",
+     "example_ko": "카드로 계산해도 될까요?"
+    },
+    {
+     "word": "size",
+     "meaning": "크기, 사이즈",
+     "example": "Do you have a bigger size?",
+     "example_ko": "더 큰 사이즈 있나요?"
+    },
+    {
+     "word": "store",
+     "meaning": "가게",
+     "example": "The store opens at ten.",
+     "example_ko": "그 가게는 10시에 문을 열어요."
+    },
+    {
+     "word": "gift",
+     "meaning": "선물",
+     "example": "I bought a gift for Mom.",
+     "example_ko": "엄마에게 드릴 선물을 샀어요."
+    }
+   ]
+  },
+  {
+   "name": "여행과 교통",
+   "level": "intermediate",
+   "words": [
+    {
+     "word": "luggage",
+     "meaning": "짐, 수하물",
+     "example": "Please watch my luggage for me.",
+     "example_ko": "제 짐 좀 봐 주세요."
+    },
+    {
+     "word": "passport",
+     "meaning": "여권",
+     "example": "Do not forget your passport.",
+     "example_ko": "여권을 잊지 마세요."
+    },
+    {
+     "word": "reservation",
+     "meaning": "예약",
+     "example": "I have a hotel reservation.",
+     "example_ko": "저는 호텔 예약이 되어 있어요."
+    },
+    {
+     "word": "departure",
+     "meaning": "출발",
+     "example": "Our departure is at noon.",
+     "example_ko": "우리 출발은 정오예요."
+    },
+    {
+     "word": "arrival",
+     "meaning": "도착",
+     "example": "The arrival time is six.",
+     "example_ko": "도착 시간은 6시예요."
+    },
+    {
+     "word": "ticket",
+     "meaning": "표",
+     "example": "I need a train ticket.",
+     "example_ko": "기차표가 필요해요."
+    },
+    {
+     "word": "destination",
+     "meaning": "목적지",
+     "example": "We reached our destination safely.",
+     "example_ko": "우리는 목적지에 무사히 도착했어요."
+    },
+    {
+     "word": "sightseeing",
+     "meaning": "관광",
+     "example": "We went sightseeing in Rome.",
+     "example_ko": "우리는 로마에서 관광을 했어요."
+    },
+    {
+     "word": "delay",
+     "meaning": "지연",
+     "example": "There was a long delay.",
+     "example_ko": "오랜 지연이 있었어요."
+    },
+    {
+     "word": "subway",
+     "meaning": "지하철",
+     "example": "I take the subway daily.",
+     "example_ko": "저는 매일 지하철을 타요."
+    }
+   ]
+  },
+  {
+   "name": "건강과 병원",
+   "level": "intermediate",
+   "words": [
+    {
+     "word": "symptom",
+     "meaning": "증상",
+     "example": "What are your symptoms today?",
+     "example_ko": "오늘 증상이 어떠세요?"
+    },
+    {
+     "word": "fever",
+     "meaning": "열",
+     "example": "The child has a high fever.",
+     "example_ko": "그 아이는 열이 높아요."
+    },
+    {
+     "word": "prescription",
+     "meaning": "처방전",
+     "example": "The doctor wrote a prescription.",
+     "example_ko": "의사가 처방전을 써 줬어요."
+    },
+    {
+     "word": "medicine",
+     "meaning": "약",
+     "example": "Take this medicine twice daily.",
+     "example_ko": "이 약을 하루에 두 번 드세요."
+    },
+    {
+     "word": "headache",
+     "meaning": "두통",
+     "example": "I have a terrible headache.",
+     "example_ko": "두통이 너무 심해요."
+    },
+    {
+     "word": "appointment",
+     "meaning": "진료 예약",
+     "example": "I made a doctor appointment.",
+     "example_ko": "저는 진료 예약을 했어요."
+    },
+    {
+     "word": "injury",
+     "meaning": "부상",
+     "example": "He recovered from his injury.",
+     "example_ko": "그는 부상에서 회복했어요."
+    },
+    {
+     "word": "allergy",
+     "meaning": "알레르기",
+     "example": "She has a peanut allergy.",
+     "example_ko": "그녀는 땅콩 알레르기가 있어요."
+    },
+    {
+     "word": "recover",
+     "meaning": "회복하다",
+     "example": "I hope you recover soon.",
+     "example_ko": "빨리 회복하시길 바라요."
+    },
+    {
+     "word": "exercise",
+     "meaning": "운동하다",
+     "example": "You should exercise every day.",
+     "example_ko": "매일 운동하는 게 좋아요."
+    }
+   ]
+  },
+  {
+   "name": "취미와 여가",
+   "level": "intermediate",
+   "words": [
+    {
+     "word": "hobby",
+     "meaning": "취미",
+     "example": "Cooking is my favorite hobby.",
+     "example_ko": "요리가 제가 가장 좋아하는 취미예요."
+    },
+    {
+     "word": "collect",
+     "meaning": "수집하다",
+     "example": "He likes to collect old coins.",
+     "example_ko": "그는 오래된 동전 모으는 걸 좋아해요."
+    },
+    {
+     "word": "gardening",
+     "meaning": "원예",
+     "example": "Gardening helps me relax.",
+     "example_ko": "원예는 제가 휴식을 취하게 해 줘요."
+    },
+    {
+     "word": "hiking",
+     "meaning": "등산, 하이킹",
+     "example": "We enjoy hiking on weekends.",
+     "example_ko": "우리는 주말마다 등산을 즐겨요."
+    },
+    {
+     "word": "painting",
+     "meaning": "그림",
+     "example": "Her painting hangs in the hall.",
+     "example_ko": "그녀의 그림이 복도에 걸려 있어요."
+    },
+    {
+     "word": "concert",
+     "meaning": "콘서트",
+     "example": "We saw a great concert.",
+     "example_ko": "우리는 멋진 콘서트를 봤어요."
+    },
+    {
+     "word": "join",
+     "meaning": "가입하다",
+     "example": "I want to join a club.",
+     "example_ko": "저는 동호회에 가입하고 싶어요."
+    },
+    {
+     "word": "relax",
+     "meaning": "휴식을 취하다",
+     "example": "I relax by reading books.",
+     "example_ko": "저는 책을 읽으며 쉬어요."
+    },
+    {
+     "word": "camping",
+     "meaning": "캠핑",
+     "example": "Camping under stars is magical.",
+     "example_ko": "별 아래서 하는 캠핑은 환상적이에요."
+    },
+    {
+     "word": "leisure",
+     "meaning": "여가",
+     "example": "I have little leisure time.",
+     "example_ko": "저는 여가 시간이 거의 없어요."
+    }
+   ]
+  },
+  {
+   "name": "감정 표현",
+   "level": "intermediate",
+   "words": [
+    {
+     "word": "excited",
+     "meaning": "신난",
+     "example": "The kids are excited about camp.",
+     "example_ko": "아이들은 캠프 때문에 신이 났어요."
+    },
+    {
+     "word": "nervous",
+     "meaning": "긴장한",
+     "example": "I felt nervous before the test.",
+     "example_ko": "시험 전에 긴장됐어요."
+    },
+    {
+     "word": "disappointed",
+     "meaning": "실망한",
+     "example": "She was disappointed with the result.",
+     "example_ko": "그녀는 결과에 실망했어요."
+    },
+    {
+     "word": "proud",
+     "meaning": "자랑스러운",
+     "example": "I am proud of you.",
+     "example_ko": "저는 당신이 자랑스러워요."
+    },
+    {
+     "word": "jealous",
+     "meaning": "질투하는",
+     "example": "He felt jealous of his friend.",
+     "example_ko": "그는 친구를 질투했어요."
+    },
+    {
+     "word": "lonely",
+     "meaning": "외로운",
+     "example": "She felt lonely in the city.",
+     "example_ko": "그녀는 도시에서 외로움을 느꼈어요."
+    },
+    {
+     "word": "embarrassed",
+     "meaning": "당황한, 창피한",
+     "example": "I was embarrassed by my mistake.",
+     "example_ko": "제 실수가 창피했어요."
+    },
+    {
+     "word": "grateful",
+     "meaning": "감사하는",
+     "example": "We are grateful for your help.",
+     "example_ko": "도와주셔서 감사해요."
+    },
+    {
+     "word": "annoyed",
+     "meaning": "짜증난",
+     "example": "He was annoyed by the noise.",
+     "example_ko": "그는 소음 때문에 짜증이 났어요."
+    },
+    {
+     "word": "relieved",
+     "meaning": "안도한",
+     "example": "I felt relieved after the exam.",
+     "example_ko": "시험이 끝나고 안도했어요."
+    }
+   ]
+  },
+  {
+   "name": "학교와 배움",
+   "level": "intermediate",
+   "words": [
+    {
+     "word": "subject",
+     "meaning": "과목",
+     "example": "Math is my hardest subject.",
+     "example_ko": "수학은 제가 가장 어려워하는 과목이에요."
+    },
+    {
+     "word": "homework",
+     "meaning": "숙제",
+     "example": "I finished my homework early.",
+     "example_ko": "저는 숙제를 일찍 끝냈어요."
+    },
+    {
+     "word": "exam",
+     "meaning": "시험",
+     "example": "The exam starts at nine.",
+     "example_ko": "시험은 9시에 시작해요."
+    },
+    {
+     "word": "lecture",
+     "meaning": "강의",
+     "example": "The lecture was very interesting.",
+     "example_ko": "그 강의는 아주 흥미로웠어요."
+    },
+    {
+     "word": "graduate",
+     "meaning": "졸업하다",
+     "example": "She will graduate next spring.",
+     "example_ko": "그녀는 내년 봄에 졸업해요."
+    },
+    {
+     "word": "scholarship",
+     "meaning": "장학금",
+     "example": "He won a big scholarship.",
+     "example_ko": "그는 큰 장학금을 받았어요."
+    },
+    {
+     "word": "review",
+     "meaning": "복습하다",
+     "example": "I review my notes nightly.",
+     "example_ko": "저는 매일 밤 필기를 복습해요."
+    },
+    {
+     "word": "assignment",
+     "meaning": "과제",
+     "example": "The assignment is due Friday.",
+     "example_ko": "과제 마감은 금요일이에요."
+    },
+    {
+     "word": "semester",
+     "meaning": "학기",
+     "example": "This semester is very busy.",
+     "example_ko": "이번 학기는 아주 바빠요."
+    },
+    {
+     "word": "memorize",
+     "meaning": "외우다",
+     "example": "I memorize ten words daily.",
+     "example_ko": "저는 하루에 단어 열 개를 외워요."
+    }
+   ]
+  },
+  {
+   "name": "약속과 계획",
+   "level": "intermediate",
+   "words": [
+    {
+     "word": "schedule",
+     "meaning": "일정",
+     "example": "My schedule is full today.",
+     "example_ko": "오늘은 일정이 꽉 찼어요."
+    },
+    {
+     "word": "available",
+     "meaning": "시간이 되는",
+     "example": "Are you available on Friday?",
+     "example_ko": "금요일에 시간 되세요?"
+    },
+    {
+     "word": "cancel",
+     "meaning": "취소하다",
+     "example": "I have to cancel our lunch.",
+     "example_ko": "우리 점심 약속을 취소해야 해요."
+    },
+    {
+     "word": "reschedule",
+     "meaning": "일정을 변경하다",
+     "example": "Can we reschedule for Monday?",
+     "example_ko": "월요일로 일정을 바꿀 수 있을까요?"
+    },
+    {
+     "word": "deadline",
+     "meaning": "마감일",
+     "example": "The deadline is next week.",
+     "example_ko": "마감일은 다음 주예요."
+    },
+    {
+     "word": "arrange",
+     "meaning": "준비하다, 마련하다",
+     "example": "I will arrange a meeting.",
+     "example_ko": "제가 만남을 마련할게요."
+    },
+    {
+     "word": "remind",
+     "meaning": "상기시키다",
+     "example": "Please remind me tomorrow morning.",
+     "example_ko": "내일 아침에 알려 주세요."
+    },
+    {
+     "word": "confirm",
+     "meaning": "확인하다",
+     "example": "Please confirm your booking today.",
+     "example_ko": "오늘 예약을 확인해 주세요."
+    },
+    {
+     "word": "plan",
+     "meaning": "계획",
+     "example": "We have a plan for summer.",
+     "example_ko": "우리는 여름 계획이 있어요."
+    },
+    {
+     "word": "invite",
+     "meaning": "초대하다",
+     "example": "I want to invite you.",
+     "example_ko": "당신을 초대하고 싶어요."
+    }
+   ]
+  },
+  {
+   "name": "뉴스와 사회",
+   "level": "advanced",
+   "words": [
+    {
+     "word": "government",
+     "meaning": "정부",
+     "example": "The government announced a new policy.",
+     "example_ko": "정부가 새 정책을 발표했어요."
+    },
+    {
+     "word": "election",
+     "meaning": "선거",
+     "example": "The election will be held soon.",
+     "example_ko": "선거가 곧 치러져요."
+    },
+    {
+     "word": "crisis",
+     "meaning": "위기",
+     "example": "The country faces a serious crisis.",
+     "example_ko": "그 나라는 심각한 위기에 직면해 있어요."
+    },
+    {
+     "word": "protest",
+     "meaning": "시위",
+     "example": "Thousands joined the peaceful protest.",
+     "example_ko": "수천 명이 평화 시위에 참여했어요."
+    },
+    {
+     "word": "legislation",
+     "meaning": "법률 제정",
+     "example": "The legislation passed after long debate.",
+     "example_ko": "그 법안은 긴 논쟁 끝에 통과됐어요."
+    },
+    {
+     "word": "inequality",
+     "meaning": "불평등",
+     "example": "Inequality is growing in many cities.",
+     "example_ko": "많은 도시에서 불평등이 커지고 있어요."
+    },
+    {
+     "word": "immigration",
+     "meaning": "이민",
+     "example": "Immigration is a sensitive topic.",
+     "example_ko": "이민은 민감한 주제예요."
+    },
+    {
+     "word": "aging population",
+     "meaning": "고령화 인구",
+     "example": "An aging population strains the budget.",
+     "example_ko": "고령화 인구는 예산에 부담을 줘요."
+    },
+    {
+     "word": "corruption",
+     "meaning": "부패",
+     "example": "Corruption damages public trust.",
+     "example_ko": "부패는 국민의 신뢰를 해쳐요."
+    },
+    {
+     "word": "reform",
+     "meaning": "개혁",
+     "example": "Voters demand real political reform.",
+     "example_ko": "유권자들은 진정한 정치 개혁을 요구해요."
+    }
+   ]
+  },
+  {
+   "name": "경제와 돈",
+   "level": "advanced",
+   "words": [
+    {
+     "word": "inflation",
+     "meaning": "물가 상승",
+     "example": "Inflation is hurting many families.",
+     "example_ko": "물가 상승이 많은 가정을 힘들게 해요."
+    },
+    {
+     "word": "recession",
+     "meaning": "경기 침체",
+     "example": "Experts fear a global recession.",
+     "example_ko": "전문가들은 세계적 경기 침체를 우려해요."
+    },
+    {
+     "word": "investment",
+     "meaning": "투자",
+     "example": "Real estate is a risky investment.",
+     "example_ko": "부동산은 위험한 투자예요."
+    },
+    {
+     "word": "interest rate",
+     "meaning": "금리",
+     "example": "The bank raised the interest rate.",
+     "example_ko": "은행이 금리를 올렸어요."
+    },
+    {
+     "word": "budget",
+     "meaning": "예산",
+     "example": "We must cut the budget.",
+     "example_ko": "우리는 예산을 줄여야 해요."
+    },
+    {
+     "word": "deficit",
+     "meaning": "적자",
+     "example": "The trade deficit keeps growing.",
+     "example_ko": "무역 적자가 계속 커지고 있어요."
+    },
+    {
+     "word": "unemployment",
+     "meaning": "실업",
+     "example": "Unemployment fell last quarter.",
+     "example_ko": "지난 분기에 실업률이 떨어졌어요."
+    },
+    {
+     "word": "revenue",
+     "meaning": "수익, 매출",
+     "example": "Company revenue doubled this year.",
+     "example_ko": "회사 매출이 올해 두 배가 됐어요."
+    },
+    {
+     "word": "tax",
+     "meaning": "세금",
+     "example": "Taxes rose again this year.",
+     "example_ko": "올해 세금이 또 올랐어요."
+    },
+    {
+     "word": "stock market",
+     "meaning": "주식 시장",
+     "example": "The stock market dropped sharply.",
+     "example_ko": "주식 시장이 급락했어요."
+    }
+   ]
+  },
+  {
+   "name": "환경과 과학",
+   "level": "advanced",
+   "words": [
+    {
+     "word": "climate change",
+     "meaning": "기후 변화",
+     "example": "Climate change threatens coastal cities.",
+     "example_ko": "기후 변화는 해안 도시들을 위협해요."
+    },
+    {
+     "word": "emission",
+     "meaning": "배출",
+     "example": "We must reduce carbon emission.",
+     "example_ko": "우리는 탄소 배출을 줄여야 해요."
+    },
+    {
+     "word": "renewable",
+     "meaning": "재생 가능한",
+     "example": "Renewable energy is getting cheaper.",
+     "example_ko": "재생 가능 에너지는 점점 저렴해지고 있어요."
+    },
+    {
+     "word": "extinction",
+     "meaning": "멸종",
+     "example": "Many species face extinction.",
+     "example_ko": "많은 종이 멸종 위기에 처해 있어요."
+    },
+    {
+     "word": "pollution",
+     "meaning": "오염",
+     "example": "Air pollution is severe here.",
+     "example_ko": "이곳은 대기 오염이 심각해요."
+    },
+    {
+     "word": "sustainable",
+     "meaning": "지속 가능한",
+     "example": "We need sustainable farming methods.",
+     "example_ko": "우리는 지속 가능한 농업 방식이 필요해요."
+    },
+    {
+     "word": "experiment",
+     "meaning": "실험",
+     "example": "The experiment produced surprising results.",
+     "example_ko": "그 실험은 놀라운 결과를 냈어요."
+    },
+    {
+     "word": "hypothesis",
+     "meaning": "가설",
+     "example": "Scientists tested the hypothesis carefully.",
+     "example_ko": "과학자들은 가설을 신중히 검증했어요."
+    },
+    {
+     "word": "ecosystem",
+     "meaning": "생태계",
+     "example": "The ecosystem is very fragile.",
+     "example_ko": "그 생태계는 매우 취약해요."
+    },
+    {
+     "word": "conservation",
+     "meaning": "보존",
+     "example": "Wildlife conservation needs more funding.",
+     "example_ko": "야생동물 보존에는 더 많은 자금이 필요해요."
+    }
+   ]
+  },
+  {
+   "name": "문화와 예술",
+   "level": "advanced",
+   "words": [
+    {
+     "word": "heritage",
+     "meaning": "유산",
+     "example": "The temple is a cultural heritage.",
+     "example_ko": "그 사찰은 문화유산이에요."
+    },
+    {
+     "word": "exhibition",
+     "meaning": "전시회",
+     "example": "The exhibition attracted large crowds.",
+     "example_ko": "그 전시회는 많은 관객을 끌었어요."
+    },
+    {
+     "word": "masterpiece",
+     "meaning": "걸작",
+     "example": "This film is a masterpiece.",
+     "example_ko": "이 영화는 걸작이에요."
+    },
+    {
+     "word": "tradition",
+     "meaning": "전통",
+     "example": "Respect for elders is a tradition.",
+     "example_ko": "어른 공경은 하나의 전통이에요."
+    },
+    {
+     "word": "contemporary",
+     "meaning": "현대의",
+     "example": "She admires contemporary art.",
+     "example_ko": "그녀는 현대 미술을 좋아해요."
+    },
+    {
+     "word": "critic",
+     "meaning": "비평가",
+     "example": "The critic praised the novel.",
+     "example_ko": "비평가는 그 소설을 칭찬했어요."
+    },
+    {
+     "word": "sculpture",
+     "meaning": "조각품",
+     "example": "The sculpture stands in the square.",
+     "example_ko": "그 조각품은 광장에 서 있어요."
+    },
+    {
+     "word": "literature",
+     "meaning": "문학",
+     "example": "He studies Korean literature.",
+     "example_ko": "그는 한국 문학을 공부해요."
+    },
+    {
+     "word": "perform",
+     "meaning": "공연하다",
+     "example": "They will perform on stage tonight.",
+     "example_ko": "그들은 오늘 밤 무대에서 공연해요."
+    },
+    {
+     "word": "authentic",
+     "meaning": "진정한, 정통의",
+     "example": "This is authentic Italian food.",
+     "example_ko": "이건 정통 이탈리아 음식이에요."
+    }
+   ]
+  },
+  {
+   "name": "토론과 의견",
+   "level": "advanced",
+   "words": [
+    {
+     "word": "argue",
+     "meaning": "주장하다",
+     "example": "Some people argue it is unfair.",
+     "example_ko": "어떤 사람들은 그것이 불공평하다고 주장해요."
+    },
+    {
+     "word": "oppose",
+     "meaning": "반대하다",
+     "example": "Many citizens oppose the plan.",
+     "example_ko": "많은 시민이 그 계획에 반대해요."
+    },
+    {
+     "word": "persuade",
+     "meaning": "설득하다",
+     "example": "She tried to persuade the committee.",
+     "example_ko": "그녀는 위원회를 설득하려 했어요."
+    },
+    {
+     "word": "controversial",
+     "meaning": "논란이 많은",
+     "example": "It is a controversial decision.",
+     "example_ko": "그것은 논란이 많은 결정이에요."
+    },
+    {
+     "word": "evidence",
+     "meaning": "증거",
+     "example": "We need more solid evidence.",
+     "example_ko": "우리는 더 확실한 증거가 필요해요."
+    },
+    {
+     "word": "perspective",
+     "meaning": "관점",
+     "example": "Try to see another perspective.",
+     "example_ko": "다른 관점에서 보려고 해 보세요."
+    },
+    {
+     "word": "valid",
+     "meaning": "타당한",
+     "example": "That is a valid point.",
+     "example_ko": "그건 타당한 지적이에요."
+    },
+    {
+     "word": "compromise",
+     "meaning": "타협",
+     "example": "Both sides reached a compromise.",
+     "example_ko": "양측이 타협에 이르렀어요."
+    },
+    {
+     "word": "bias",
+     "meaning": "편견",
+     "example": "The report shows clear bias.",
+     "example_ko": "그 보고서는 명백한 편견을 보여 줘요."
+    },
+    {
+     "word": "refute",
+     "meaning": "반박하다",
+     "example": "He could not refute her claim.",
+     "example_ko": "그는 그녀의 주장을 반박하지 못했어요."
+    }
+   ]
+  },
+  {
+   "name": "기술과 미래",
+   "level": "advanced",
+   "words": [
+    {
+     "word": "artificial intelligence",
+     "meaning": "인공지능",
+     "example": "Artificial intelligence is changing every industry.",
+     "example_ko": "인공지능은 모든 산업을 바꾸고 있어요."
+    },
+    {
+     "word": "automation",
+     "meaning": "자동화",
+     "example": "Automation may replace many jobs.",
+     "example_ko": "자동화는 많은 일자리를 대체할 수 있어요."
+    },
+    {
+     "word": "privacy",
+     "meaning": "사생활",
+     "example": "Online privacy is a growing concern.",
+     "example_ko": "온라인 사생활 보호는 점점 큰 우려예요."
+    },
+    {
+     "word": "innovation",
+     "meaning": "혁신",
+     "example": "Innovation drives economic growth.",
+     "example_ko": "혁신은 경제 성장을 이끌어요."
+    },
+    {
+     "word": "algorithm",
+     "meaning": "알고리즘",
+     "example": "The algorithm recommends videos to users.",
+     "example_ko": "그 알고리즘은 사용자에게 영상을 추천해요."
+    },
+    {
+     "word": "cybersecurity",
+     "meaning": "사이버 보안",
+     "example": "Cybersecurity is vital for banks.",
+     "example_ko": "사이버 보안은 은행에 매우 중요해요."
+    },
+    {
+     "word": "breakthrough",
+     "meaning": "획기적 발전",
+     "example": "Doctors announced a medical breakthrough.",
+     "example_ko": "의사들이 획기적인 의학적 발전을 발표했어요."
+    },
+    {
+     "word": "digital",
+     "meaning": "디지털의",
+     "example": "Everything is becoming more digital.",
+     "example_ko": "모든 것이 점점 더 디지털화되고 있어요."
+    },
+    {
+     "word": "obsolete",
+     "meaning": "구식이 된",
+     "example": "Old phones become obsolete quickly.",
+     "example_ko": "오래된 휴대폰은 금방 구식이 돼요."
+    },
+    {
+     "word": "ethical",
+     "meaning": "윤리적인",
+     "example": "We face an ethical dilemma.",
+     "example_ko": "우리는 윤리적 딜레마에 직면해 있어요."
+    }
+   ]
+  }
+ ]
+}
